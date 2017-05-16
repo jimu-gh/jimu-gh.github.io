@@ -15,15 +15,28 @@
     </head>
     <body>
         <div class="navbar-fixed">
-            <nav class="white" role="navigation">
+            <nav class="cyan lighten-4" role="navigation">
                 <div class="nav-wrapper container">
-                    <a id="logo-container" href="#" class="right btn-small brand-logo waves-effect white waves-dark">Jim Ho</a>
-                    <ul class="left hide-on-med-and-down">
-                        <li><a href="#">Navbar Link</a></li>
+                    <a id="logo-container" href="#" class="left brand-logo">Jim Ho</a>
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="#!">one</a></li>
+                        <li><a href="#!">two</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!">three</a></li>
+                    </ul>
+                    <!-- MAIN NAVBAR BUTTONS -->
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">about</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">portfolio<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="#">contact</a></li>
+
                     </ul>
 
                     <ul id="nav-mobile" class="side-nav">
-                        <li><a href="#">Navbar Link</a></li>
+                        <li><a href="#!">one</a></li>
+                        <li><a href="#!">two</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#!">three</a></li>
                     </ul>
                     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 </div>
@@ -38,8 +51,6 @@
                     <div class="row center">
                         <h3 class="header col s12 white-text light">Full Stack Web Developer.</h3>
                     </div>
-                    <br><br>
-
                 </div>
             </div>
             <div class="parallax"><img src="sunrise.jpg" alt="Background 1"></div>
