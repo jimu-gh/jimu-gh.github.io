@@ -96,7 +96,7 @@
         showCursor:false,
 	});
     $(".answerheader").typed({
-		strings: [":^500D^3000","^4400A Full Stack Web Developer<br>(RESTful Apps)^3000","A Data Enthusiast With Strong Focus On UI/UX^3000","A Service-oriented Entrepreneur^3000","A Trilingual Language Specialist<br>(8 yrs Int'l Experience)^3000","A Forward-thinking Power Learner^3000","A Python, Radiohead, And Sushi Lover^3000"],
+		strings: [":^500D^3000","^4400Full Stack Web Developer<br>(RESTful Apps)^3000","Data Enthusiast With Strong Focus On UI/UX^3000","Service-oriented Entrepreneur^3000","Trilingual Language Specialist<br>(8 yrs Int'l Experience)^3000","Forward-thinking Power Learner^3000","Python, Radiohead, And Sushi Lover^3000"],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
