@@ -90,13 +90,13 @@ footer.page-footer {
     background-color: black;
 }
 
-#topheader {
+#topmsg {
   -webkit-animation-duration: 3s;
   -webkit-animation-delay: 2s;
   -webkit-animation-iteration-count: 1;
 }
 
-#subheader {
+#submsg {
   -webkit-animation-duration: 3s;
   -webkit-animation-delay: 2s;
   -webkit-animation-iteration-count: infinite;
