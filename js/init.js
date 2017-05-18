@@ -131,10 +131,10 @@
 
     // Animations
 
-    $('#topheader').animateCss('rubberBand');
+    $('#topmsg').animateCss('rubberBand');
 
 
-    setTimeout("$('#subheader').animateCss('pulse');",5000)
+    setTimeout("$('#submsg').animateCss('pulse');",5000)
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
