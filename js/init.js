@@ -86,7 +86,7 @@
 
     setTimeout(updateBackground, 20000);
 
-	$(".questionheader").typed({
+	$("#topmsg").typed({
 		strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
         typeSpeed: 100,
 		startDelay: 0,
@@ -95,16 +95,46 @@
 		backDelay: 0,
         showCursor:false,
 	});
-    $(".answerheader").typed({
-		strings: [":^500D^3000","^4400Full Stack Web Developer<br>(RESTful Apps)^3000","Data Enthusiast With Strong Focus On UI/UX^3000","Service-oriented Entrepreneur^3000","Trilingual Language Specialist<br>(8 yrs Int'l Experience)^3000","Forward-thinking Power Learner^3000","Python, Radiohead, And Sushi Lover^3000"],
+    $("#submsg").typed({
+		strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Trilingual Language Specialist<br>(8 yrs Int'l Experience)","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover"],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
         loop:true,
         showCursor:true,
         contentType: 'html',
-        backDelay: 0,
+        backDelay: 3000,
 	});
+
+    // dropdown settings
+
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+      }
+    );
+
+    $.fn.extend({
+        animateCss: function (animationName) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+        }
+    });
+
+    // Animations
+
+    $('#topheader').animateCss('rubberBand');
+
+
+    setTimeout("$('#subheader').animateCss('pulse');",5000)
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

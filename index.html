@@ -5,30 +5,31 @@
         <meta name="author" content="Jim Ho">
         <meta name="description" content="Jim Ho Homepage">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-        <title>Jim Ho | Full Stack Web Developer</title>
+        <title>Jim Ho</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="google-site-verification" content="hY80-fyLjBIwRhvewhwif_vhk0VNnv5snuBA8TfGnt0" />
+        <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>
         <div class="navbar-fixed">
             <nav class="black" role="navigation">
                 <div class="nav-wrapper container">
-                    <a id="logo-container" href="#" class="left brand-logo"><i class="material-icons">face</i>Jim</a>
+                    <a id="logo-container" href="#" class="left brand-logo white-text"><i class="material-icons">face</i>Jim</a>
                     <ul id="dropdown1" class="dropdown-content">
-                        <li><a href="#!">one</a></li>
-                        <li><a href="#!">two</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#!">three</a></li>
+                        <li><a class="black white-text" id="portfoliobutton1" href="#!">one</a></li>
+                        <li><a class="black white-text" id="portfoliobutton2" href="#!">two</a></li>
+                        <li><a class="black white-text" id="portfoliobutton3" href="#!">three</a></li>
                     </ul>
                     <!-- MAIN NAVBAR BUTTONS -->
                     <ul class="right hide-on-med-and-down">
-                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">portfolio<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a href="#">references</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a class="white-text" href="#about">about</a></li>
+                        <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">portfolio<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="white-text" href="#">references</a></li>
+                        <li><a class="white-text" href="#">contact</a></li>
 
                     </ul>
 
@@ -46,21 +47,20 @@
         <div id="index-banner" class="parallax-container">
             <div class="section no-pad-bot">
                 <div class="container">
-                    <h2 class="header center gray-text text-lighten-2"><span class="questionheader"></span></h2>
                     <div class="row center">
-                        <h3 class="header col s12 white-text light"><span class="answerheader"></span></h3>
+                        <h2 class="header center white-text" id="topmsg"></h2>
+                        <h3 class="header center white-text light"><span id="submsg"></span></h3>
                     </div>
                 </div>
             </div>
+            <a name="about"></a>
             <div class="parallax black">
                 <img src="images/6_md.png" id="bg1" alt="Background 1">
             </div>
         </div>
 
-
         <div class="container">
             <div class="section">
-
             <!--   Icon Section   -->
                 <div class="row">
                     <h4 class="header center black-text">About Me</h4>
@@ -172,6 +172,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/init.js"></script>
+        <script src="js/typed.js" type="text/javascript"></script>
         <script src="js/typed.js" type="text/javascript"></script>
     </body>
 </html>

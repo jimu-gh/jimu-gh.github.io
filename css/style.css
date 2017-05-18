@@ -78,8 +78,26 @@ footer.page-footer {
     100% { opacity:1; }
 }
 
-.typed-fade-out{
-    opacity: 0;
-    animation: 0;
-    transition: opacity .25s;
+.white-text li a {
+    color:white;
+}
+
+.white-text a {
+    color:white;
+}
+
+.black li a {
+    background-color: black;
+}
+
+#topheader {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
+}
+
+#subheader {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
 }
