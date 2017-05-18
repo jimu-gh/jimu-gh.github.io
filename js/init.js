@@ -50,20 +50,23 @@
         if (hour == 27) {
             hour = 3;
         };
-        $('#bg1').fadeOut(5000, function(){
+        $('#bg1').fadeOut(2000, function(){
             var imgString = "images/" + hour + "_md_low.png"
-            $('#bg1').attr("src", imgString);
-            $('#bg1').fadeIn(400);
+            // $('#bg1').attr("src", imgString);
+            $('#bg1').attr("src", function(){
+                return imgString
+            });
+            $('#bg1').fadeIn(800);
         })
     }
 
     // Update background in regular intervals
     function updateBackground(){
         nextBackground();
-        setTimeout(updateBackground, 10000);
+        setTimeout(updateBackground, 20000);
     }
 
-    setTimeout(updateBackground, 3000);
+    setTimeout(updateBackground, 20000);
 
 	$("#topmsg").typed({
 		strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
