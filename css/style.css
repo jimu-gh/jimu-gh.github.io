@@ -101,3 +101,7 @@ footer.page-footer {
   -webkit-animation-delay: 2s;
   -webkit-animation-iteration-count: infinite;
 }
+
+.parallax-container {
+    height:700px;
+}

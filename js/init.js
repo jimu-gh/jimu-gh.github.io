@@ -56,7 +56,7 @@
             $('#bg1').attr("src", function(){
                 return imgString
             });
-            $('#bg1').fadeIn(800);
+            $('#bg1').fadeIn(400);
         })
     }
 
