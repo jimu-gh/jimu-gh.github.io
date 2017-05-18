@@ -46,10 +46,10 @@
     // Set background to current time
 
     function setCurrentBackground(){
-
         if (currentHour == 0) {
             currentHour = 24;
         }
+        // lumping in 3's
         currentHour = currentHour - (currentHour % 3)
         var imgString = "images/" + Math.floor(currentHour) + "_md_low.png"
         $('#bg1').attr("src", imgString);
@@ -67,24 +67,24 @@
 
     function nextBackground(){
         var hour = getBGTime();
-        $('#bg1').fadeOut(2500, function(){
-            hour += 3;
-            if (hour == 27) {
-                hour = 3;
-            };
+        hour += 3;
+        if (hour == 27) {
+            hour = 3;
+        };
+        $('#bg1').fadeOut(5000, function(){
             var imgString = "images/" + hour + "_md.png"
             $('#bg1').attr("src", imgString);
-            $('#bg1').fadeIn(2500);
+            $('#bg1').fadeIn(400);
         })
     }
 
     // Update background in regular intervals
     function updateBackground(){
         nextBackground();
-        setTimeout(updateBackground, 20000);
+        setTimeout(updateBackground, 10000);
     }
 
-    setTimeout(updateBackground, 20000);
+    setTimeout(updateBackground, 3000);
 
 	$("#topmsg").typed({
 		strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
