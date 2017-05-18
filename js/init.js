@@ -10,12 +10,14 @@
     var currentHour = currentDate.getHours();
     var dateString = currentDate.toLocaleDateString();
     var timeString = currentDate.toLocaleTimeString();
-
+    if (currentHour == 0) {
+        currentHour = 24;
+    }
     // Set background to current time
 
     function setCurrentBackground(){
-        if (currentHour == 0) {
-            currentHour = 24;
+        if (currentHour >= 21 || currentHour < 6) {
+            TextToWhite()
         }
         // lumping in 3's
         currentHour = currentHour - (currentHour % 3)
@@ -44,29 +46,57 @@
         }
     }
 
+    function TextToWhite(){
+        $('#parallaxbg').removeClass('white');
+        $('#parallaxbg').addClass('black');
+        $('#topmsg').removeClass('black-text');
+        $('#topmsg').addClass('white-text');
+        $('#submsg').removeClass('black-text');
+        $('#submsg').addClass('white-text');
+        $('#cursorobj').removeClass('black-text');
+        $('#cursorobj').addClass('white-text');
+    }
+
+    function TextToBlack(){
+        $('#parallaxbg').removeClass('black');
+        $('#parallaxbg').addClass('white');
+        $('#topmsg').removeClass('white-text');
+        $('#topmsg').addClass('black-text');
+        $('#submsg').removeClass('white-text');
+        $('#submsg').addClass('black-text');
+        $('#cursorobj').removeClass('white-text');
+        $('#cursorobj').addClass('black-text');
+    }
+
     function nextBackground(){
         var hour = getBGTime();
         hour += 3;
         if (hour == 27) {
             hour = 3;
         };
-        $('#bg1').fadeOut(2000, function(){
+        $('#bg1').fadeOut(1750, function(){
             var imgString = "images/" + hour + "_lg.jpg"
-            // $('#bg1').attr("src", imgString);
             $('#bg1').attr("src", function(){
                 return imgString
             });
-            $('#bg1').fadeIn(400);
+            $('#bg1').fadeIn(1750, function(){
+                if (hour == 18) {
+                    TextToWhite()
+                }
+                if (hour == 9) {
+                    TextToBlack()
+                }
+            });
         })
     }
 
     // Update background in regular intervals
     function updateBackground(){
         nextBackground();
-        setTimeout(updateBackground, 20000);
+        setTimeout(updateBackground, 10000);
     }
 
-    setTimeout(updateBackground, 20000);
+    setTimeout(updateBackground, 10000);
 
 	$("#topmsg").typed({
 		strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
