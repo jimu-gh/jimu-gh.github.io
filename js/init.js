@@ -51,7 +51,7 @@
             currentHour = 24;
         }
         currentHour = currentHour - (currentHour % 3)
-        var imgString = "images/" + Math.floor(currentHour) + "_md.png"
+        var imgString = "images/" + Math.floor(currentHour) + "_md_low.png"
         $('#bg1').attr("src", imgString);
     }
     setCurrentBackground();
