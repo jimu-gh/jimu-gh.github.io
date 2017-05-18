@@ -11,38 +11,6 @@
     var dateString = currentDate.toLocaleDateString();
     var timeString = currentDate.toLocaleTimeString();
 
-    // current date  in string form
-
-    // var currentDayNum = currentDate.getDay();
-
-    // var currentDay = "";
-    // if (currentDayNum == 0){
-    //     currentDay = "Sunday";
-    // } else if (currentDayNum == 1){
-    //     currentDay = "Monday";
-    // } else if (currentDayNum == 2){
-    //     currentDay = "Tuesday";
-    // } else if (currentDayNum == 3){
-    //     currentDay = "Wednesday";
-    // } else if (currentDayNum == 4){
-    //     currentDay = "Thursday";
-    // } else if (currentDayNum == 5){
-    //     currentDay = "Friday";
-    // } else if (currentDayNum == 6){
-    //     currentDay = "Saturday";
-    // }
-
-    var haveANiceDayStr = ""
-    if (currentHour > 4 && currentHour <= 10) {
-        haveANiceDayStr = "Good morning!^5000";
-    } else if (currentHour == 12) {
-        haveANiceDayStr = "Good day!^5000";
-    } else if (currentHour <= 16) {
-        haveANiceDayStr = "Good afternoon!^5000";
-    } else{
-        haveANiceDayStr = "Good evening!^5000";
-    }
-
     // Set background to current time
 
     function setCurrentBackground(){
@@ -55,6 +23,17 @@
         $('#bg1').attr("src", imgString);
     }
     setCurrentBackground();
+
+    var haveANiceDayStr = ""
+    if (currentHour > 4 && currentHour <= 10) {
+        haveANiceDayStr = "Good morning!^5000";
+    } else if (currentHour == 12) {
+        haveANiceDayStr = "Good day!^5000";
+    } else if (currentHour <= 16) {
+        haveANiceDayStr = "Good afternoon!^5000";
+    } else{
+        haveANiceDayStr = "Good evening!^5000";
+    }
 
     function getBGTime(){
         if ($('#bg1').attr("src")[8] == "_"){
@@ -72,7 +51,7 @@
             hour = 3;
         };
         $('#bg1').fadeOut(5000, function(){
-            var imgString = "images/" + hour + "_md.png"
+            var imgString = "images/" + hour + "_md_low.png"
             $('#bg1').attr("src", imgString);
             $('#bg1').fadeIn(400);
         })
