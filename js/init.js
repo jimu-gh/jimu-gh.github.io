@@ -19,7 +19,7 @@
         }
         // lumping in 3's
         currentHour = currentHour - (currentHour % 3)
-        var imgString = "images/" + Math.floor(currentHour) + "_md.png"
+        var imgString = "images/" + Math.floor(currentHour) + "_lg.jpg"
         $('#bg1').attr("src", imgString);
     }
     setCurrentBackground();
@@ -51,7 +51,7 @@
             hour = 3;
         };
         $('#bg1').fadeOut(2000, function(){
-            var imgString = "images/" + hour + "_md.png"
+            var imgString = "images/" + hour + "_lg.jpg"
             // $('#bg1').attr("src", imgString);
             $('#bg1').attr("src", function(){
                 return imgString
