@@ -24,12 +24,12 @@ p {
 .parallax-container {
   min-height: 380px;
   line-height: 0;
-  height: 500px;
+  height: 450px;
   color: rgba(255,255,255,.9);
 }
 .parallax-container .section {
     width: 100%;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 @media only screen and (min-width: 993px) {
