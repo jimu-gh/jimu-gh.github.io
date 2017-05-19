@@ -22,9 +22,9 @@ p {
 }
 
 .parallax-container {
-  min-height: 450px;
+  min-height: 600px;
   line-height: 0;
-  height: 450px;
+  height: 600px;
   color: rgba(255,255,255,.9);
 }
 .parallax-container .section {
@@ -32,9 +32,20 @@ p {
     margin-top: 5%;
 }
 
+.topmenubutton{
+    margin-right: -0.5rem;
+}
+
+.topicon{
+    width: 2rem;
+    margin-left: -.50rem;
+    margin-right: -.50rem;
+    margin-top: 1rem;
+}
+
 @media only screen and (min-width: 993px) {
     .container{
-        background-color: red;
+        /*background-color: red;*/
     }
     .parallax-container .section {
       position: absolute;

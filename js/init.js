@@ -1,23 +1,22 @@
 (function($){
   $(function(){
 
-
-    // saving current date globally
+    // CURRENT TIME
     var currentDate = new Date();
 
     var currentHour = currentDate.getHours();
     var dateString = currentDate.toLocaleDateString();
     var timeString = currentDate.toLocaleTimeString();
-    if (currentHour == 0) {
+    if (currentHour < 3) {
         currentHour = 24;
     }
-    // Set background to current time
 
+    // SET BACKGROUND TO CURRENT TIME
     function setCurrentBackground(){
         if (currentHour >= 21 || currentHour < 6) {
             TextToWhite()
         }
-        // lumping in 3's
+        // LUMP IN 3'S
         currentHour = currentHour - (currentHour % 3)
         var imgString = "images/" + Math.floor(currentHour) + "_lg.jpg"
         $('#bg1').attr("src", imgString);
@@ -27,7 +26,7 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
-
+    // SET CUSTOM GREETING
     var haveANiceDayStr = ""
     if (currentHour > 4 && currentHour <= 10) {
         haveANiceDayStr = "Good morning!^5000";
@@ -39,6 +38,7 @@
         haveANiceDayStr = "Good evening!^5000";
     }
 
+    // GET CURRENT TIME FROM BG
     function getBGTime(){
         if ($('#bg1').attr("src")[8] == "_"){
             return parseInt($('#bg1').attr("src")[7]);
@@ -92,7 +92,7 @@
         })
     }
 
-    // Update background in regular intervals
+    // REGULARLY UPDATE BACKGROUND
     function updateBackground(){
         nextBackground();
         setTimeout(updateBackground, 30000);
@@ -100,17 +100,18 @@
 
     setTimeout(updateBackground, 30000);
 
-	$("#topmsg").typed({
-		strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
+    // MESSAGE PROGRAMMING
+    $("#topmsg").typed({
+        strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
         typeSpeed: 100,
-		startDelay: 0,
-		backSpeed: 33,
+        startDelay: 0,
+        backSpeed: 33,
         contentType: 'html',
-		backDelay: 0,
+        backDelay: 0,
         showCursor:false,
-	});
+    });
     $("#submsg").typed({
-		strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist<br>(8 yrs Int'l Experience)","PC Gamer (Hearthstone, mainly)",""],
+        strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist<br>(8 yrs Int'l Experience)","PC Gamer (Hearthstone, mainly)",""],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
@@ -118,9 +119,9 @@
         showCursor:true,
         contentType: 'html',
         backDelay: 3000,
-	});
+    });
 
-    // dropdown settings
+    // DROPDOWN SETTINGS
 
     $('.dropdown-button').dropdown({
       inDuration: 300,
@@ -134,6 +135,7 @@
       }
     );
 
+    // ANIMATIONS
     $.fn.extend({
         animateCss: function (animationName) {
             var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -142,8 +144,6 @@
             });
         }
     });
-
-    // Animations
 
     $('#topmsg').animateCss('rubberBand');
 
@@ -167,6 +167,24 @@
           //   });
           // }
     });
+
+    $('#linkedin').hover(function(){
+        $('#linkedin').attr('src','images/icon_linkedin_hover.png');
+    },function(){
+        $('#linkedin').attr('src','images/icon_linkedin.png');
+    })
+
+    $('#github').hover(function(){
+        $('#github').attr('src','images/icon_github_hover.png');
+    },function(){
+        $('#github').attr('src','images/icon_github.png');
+    })
+
+    $('#email').hover(function(){
+        $('#email').attr('src','images/icon_email_hover.png');
+    },function(){
+        $('#email').attr('src','images/icon_email.png');
+    })
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
