@@ -145,6 +145,8 @@
         }
     });
 
+    var animationList = ["bounce", "flash", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello"]
+
     $('#topmsg').animateCss('rubberBand');
 
     $(window).scroll(function(){
@@ -172,19 +174,40 @@
         $('#linkedin').attr('src','images/icon_linkedin_hover.png');
     },function(){
         $('#linkedin').attr('src','images/icon_linkedin.png');
-    })
+    });
 
     $('#github').hover(function(){
         $('#github').attr('src','images/icon_github_hover.png');
     },function(){
         $('#github').attr('src','images/icon_github.png');
-    })
+    });
 
     $('#email').hover(function(){
         $('#email').attr('src','images/icon_email_hover.png');
     },function(){
         $('#email').attr('src','images/icon_email.png');
-    })
+    });
+
+    function resetStrengthTexts(){
+        $('#strengthtext').animateCss('fadeOut');
+        $('#strengthtext').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('#strengthtext').text('STRENGTHS')
+            $('#strengthtext').animateCss('fadeIn');
+        });
+    }
+
+    $('.strength').hover(function(){
+        var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
+        $(this).animateCss(randAnimation);
+        var strengthtext = $(this).attr('alt');
+        $('#strengthtext').animateCss('fadeOutRight');
+        $('#strengthtext').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $('#strengthtext').text(strengthtext);
+            $('#strengthtext').animateCss('fadeInLeft');
+        });
+    },function(){
+        setTimeout(resetStrengthTexts,7000);
+    });
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
