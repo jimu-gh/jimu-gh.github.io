@@ -8,7 +8,7 @@
 
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color: white;
 }
 
 p {
@@ -16,18 +16,27 @@ p {
 }
 
 .button-collapse {
-  color: #26a69a;
+  color: white;
+  position:relative;
+  left:-8%;
 }
 
 .parallax-container {
   min-height: 380px;
   line-height: 0;
-  height: auto;
+  height: 500px;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
+.parallax-container .section {
     width: 100%;
-  }
+    margin-top: 15%;
+}
+
+@media only screen and (min-width: 993px) {
+    .container{
+        /*background-color: red;*/
+    }
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -46,12 +55,96 @@ p {
 }
 
 .icon-block {
-  padding: 0 15px;
+    /*background-color: blue;*/
+    display:inline-block;
+    /*-webkit-animation: iconOrbit 6s linear infinite;
+    -moz-animation: iconOrbit 6s linear infinite;
+    -o-animation: iconOrbit 6s linear infinite;
+    animation: iconOrbit 6s linear infinite;*/
 }
+
+@-webkit-keyframes iconOrbit {
+    0%  { -webkit-transform: rotate(0deg) translateX(5px) translateY(120px) rotate(0deg) scale(1); }
+    25%  { -webkit-transform: rotate(90deg) translateX(5px) translateY(120px) rotate(-90deg) scale(.75); }
+    50%  { -webkit-transform: rotate(180deg) translateX(5px) translateY(120px) rotate(-180deg) scale(.60); }
+    75%  { -webkit-transform: rotate(270deg) translateX(5px) translateY(120px) rotate(-270deg) scale(.75); }
+    100%  { -webkit-transform: rotate(360deg) translateX(5px) translateY(120px) rotate(-360deg) scale(1); }
+}
+
+@-moz-keyframes iconOrbit {
+    0%  { -moz-transform: rotate(0deg) translateX(5px) translateY(120px) rotate(0deg) scale(1); }
+    25%  { -moz-transform: rotate(90deg) translateX(5px) translateY(120px) rotate(-90deg) scale(.75); }
+    50%  { -moz-transform: rotate(180deg) translateX(5px) translateY(120px) rotate(-180deg) scale(.60); }
+    75%  { -moz-transform: rotate(270deg) translateX(5px) translateY(120px) rotate(-270deg) scale(.75); }
+    100%  { -moz-transform: rotate(360deg) translateX(5px) translateY(120px) rotate(-360deg) scale(1); }
+}
+
+@-o-keyframes iconOrbit {
+        0%  { -o-transform: rotate(0deg) translateX(5px) translateY(120px) rotate(0deg) scale(1); }
+    25%  { -o-transform: rotate(90deg) translateX(5px) translateY(120px) rotate(-90deg) scale(.75); }
+    50%  { -o-transform: rotate(180deg) translateX(5px) translateY(120px) rotate(-180deg) scale(.60); }
+    75%  { -o-transform: rotate(270deg) translateX(5px) translateY(120px) rotate(-270deg) scale(.75); }
+    100%  { -o-transform: rotate(360deg) translateX(5px) translateY(120px) rotate(-360deg) scale(1); }
+}
+
+@keyframes iconOrbit {
+    0%  { transform: rotate(0deg) translateX(5px) translateY(120px) rotate(0deg) scale(1); }
+    25%  { transform: rotate(90deg) translateX(5px) translateY(120px) rotate(-90deg) scale(.75); }
+    50%  { transform: rotate(180deg) translateX(5px) translateY(120px) rotate(-180deg) scale(.60); }
+    75%  { transform: rotate(270deg) translateX(5px) translateY(120px) rotate(-270deg) scale(.75); }
+    100%  { transform: rotate(360deg) translateX(5px) translateY(120px) rotate(-360deg) scale(1); }
+}
+
 .icon-block .material-icons {
   font-size: inherit;
 }
 
 footer.page-footer {
   margin: 0;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.white-text li a {
+    color:white;
+}
+
+.white-text a {
+    color:white;
+}
+
+.black li a {
+    background-color: black;
+}
+
+#topmsg {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: 1;
+}
+
+#submsg {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
 }
