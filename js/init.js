@@ -23,7 +23,7 @@
     }
     setCurrentBackground();
 
-    $('.button-collapse').sideNav();
+    // $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
     // SET CUSTOM GREETING
@@ -111,7 +111,7 @@
         showCursor:false,
     });
     $("#submsg").typed({
-        strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist<br>(8 yrs Int'l Experience)","PC Gamer (Hearthstone, mainly)",""],
+        strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist"],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
@@ -195,17 +195,23 @@
     var nextStrength = "";
 
     function resetStrengthTexts(){
-        $('#strengthtext').animateCss('zoomOut');
-        $('#strengthtext').one(animationEnd, function(){
-            $('#strengthtext').text('STRENGTHS')
-            $('#strengthtext').animateCss('zoomIn');
-            wait2 = false;
-            wait1 = false;
+        $('#strengthdesc').animateCss('flipOutX');
+        $('#strengthdesc').one(animationEnd, function(){
+            $('#strengthdesc').html('<br>')
+            $('#strengthdesc').animateCss('flipInX');
+            $('#strengthtext').animateCss('zoomOut');
+            $('#strengthtext').one(animationEnd, function(){
+                $('#strengthtext').text('STRENGTHS');
+                $('#strengthtext').animateCss('zoomIn');
+            });
         });
+        wait2 = false;
+        wait1 = false;
     }
 
     $('.strength').hover(function(){
-        nextStrength = $(this).attr('alt');
+        nextStrength = $(this).attr('id');
+        var nextDesc = $(this).attr('alt');
         if (wait1 == false || currentStrength != nextStrength) {
             wait1 = true;
             currentStrength = nextStrength;
@@ -214,13 +220,16 @@
             $('#strengthtext').animateCss('zoomOut');
             $('#strengthtext').one(animationEnd, function(){
                 $('#strengthtext').text(nextStrength);
-                $('#strengthdesc').text("testing");
                 $('#strengthtext').animateCss('zoomIn');
-                $('#strengthtext').one(animationEnd, function(){
-                })
+            });
+            $('#strengthdesc').animateCss('flipOutX');
+            $('#strengthdesc').one(animationEnd, function(){
+                $('#strengthdesc').text(nextStrength);
+                $('#strengthdesc').text(nextDesc);
+                $('#strengthdesc').animateCss('flipInX');
             });
         }
-    },function(){
+    }, function(){
         if (wait2 == false) {
             setTimeout(resetStrengthTexts,5000);
             wait2 = true;

@@ -73,7 +73,7 @@ p {
 
 .icon-block {
     /*background-color: blue;*/
-    display:inline-block;
+    text-align: center;
 }
 
 .icon-block .material-icons {
