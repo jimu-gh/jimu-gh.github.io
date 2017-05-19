@@ -1,8 +1,6 @@
 (function($){
   $(function(){
 
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
 
     // saving current date globally
     var currentDate = new Date();
@@ -25,6 +23,10 @@
         $('#bg1').attr("src", imgString);
     }
     setCurrentBackground();
+
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+
 
     var haveANiceDayStr = ""
     if (currentHour > 4 && currentHour <= 10) {
