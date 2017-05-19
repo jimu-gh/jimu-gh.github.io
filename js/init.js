@@ -147,6 +147,8 @@
     // ANIMATIONS
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     var animationList = ["bounce", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello"]
+    var colorList = ["red","purple","deep-purple","indigo","blue","light-blue","cyan","teal","green","light-green","lime","yellow","amber","orange","deep-orange"]
+    var colorCount = 0;
 
     $.fn.extend({
         animateCss: function (animationName) {
@@ -221,10 +223,27 @@
     $('.strength').hover(function(){
         nextStrength = $(this).attr('id');
         var nextDesc = $(this).attr('alt');
+
+        var textColor = colorList[colorCount] + "-text";
+
+        $(this).removeClass();
+        $(this).addClass('strength');
+        $(this).addClass(textColor);
+
+        // color change for next icon
+
+        if (colorList.length == colorCount){
+            colorCount = 0;
+        } else {
+            colorCount += 1;
+        }
+
         if (wait1 == false || currentStrength != nextStrength) {
             wait1 = true;
             currentStrength = nextStrength;
             var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
+
+            $(this).addClass('red-text');
             $(this).animateCss(randAnimation);
             $('#strengthtext').animateCss('fadeOutRight');
             $('#strengthtext').one(animationEnd, function(){
@@ -240,9 +259,12 @@
         }
     }, function(){
         if (wait2 == false) {
-            setTimeout(resetStrengthTexts,5000);
+            setTimeout(resetStrengthTexts,15000);
             wait2 = true;
         }
+        $(this).removeClass();
+        $(this).addClass('strength');
+        $(this).addClass('white-text');
     });
 
   }); // end of document ready

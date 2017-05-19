@@ -15,6 +15,10 @@ p {
   line-height: 2rem;
 }
 
+body {
+    background-color: #253238;
+}
+
 .button-collapse {
   color: white;
   position:relative;
@@ -143,4 +147,8 @@ footer.page-footer {
 #contact {
     margin-top:-5rem;
     padding-top:5rem;
+}
+
+.projectheader{
+    background-color: rgba(255, 255, 255, 0.05);
 }
