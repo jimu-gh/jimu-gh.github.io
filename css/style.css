@@ -127,3 +127,20 @@ footer.page-footer {
   -webkit-animation-delay: 0s;
   -webkit-animation-iteration-count: 1;
 }
+
+/* tweak the below to adjust linkscroll destinations */
+
+#strengths {
+    margin-top:-7rem;
+    padding-top:7rem;
+}
+
+#portfolio {
+    margin-top:-11rem;
+    padding-top:9rem;
+}
+
+#contact {
+    margin-top:-5rem;
+    padding-top:5rem;
+}

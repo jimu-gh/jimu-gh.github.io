@@ -1,6 +1,15 @@
 (function($){
   $(function(){
 
+    $(".jumper").on("click", function( e ) {
+        console.log('hi');
+        e.preventDefault();
+        $("body, html").animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 600);
+
+    });
+
     // CURRENT TIME
     var currentDate = new Date();
 
@@ -199,10 +208,10 @@
         $('#strengthdesc').one(animationEnd, function(){
             $('#strengthdesc').html('<br>')
             $('#strengthdesc').animateCss('flipInX');
-            $('#strengthtext').animateCss('zoomOut');
+            $('#strengthtext').animateCss('fadeOutRight');
             $('#strengthtext').one(animationEnd, function(){
                 $('#strengthtext').text('STRENGTHS');
-                $('#strengthtext').animateCss('zoomIn');
+                $('#strengthtext').animateCss('fadeInLeft');
             });
         });
         wait2 = false;
@@ -217,10 +226,10 @@
             currentStrength = nextStrength;
             var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
             $(this).animateCss(randAnimation);
-            $('#strengthtext').animateCss('zoomOut');
+            $('#strengthtext').animateCss('fadeOutRight');
             $('#strengthtext').one(animationEnd, function(){
                 $('#strengthtext').text(nextStrength);
-                $('#strengthtext').animateCss('zoomIn');
+                $('#strengthtext').animateCss('fadeInLeft');
             });
             $('#strengthdesc').animateCss('flipOutX');
             $('#strengthdesc').one(animationEnd, function(){
