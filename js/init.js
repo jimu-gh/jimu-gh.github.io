@@ -136,16 +136,17 @@
     );
 
     // ANIMATIONS
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    var animationList = ["bounce", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello"]
+
     $.fn.extend({
         animateCss: function (animationName) {
-            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
             this.addClass('animated ' + animationName).one(animationEnd, function() {
                 $(this).removeClass('animated ' + animationName);
             });
         }
     });
-
-    var animationList = ["bounce", "flash", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello"]
 
     $('#topmsg').animateCss('rubberBand');
 
@@ -188,25 +189,42 @@
         $('#email').attr('src','images/icon_email.png');
     });
 
+    var wait1 = false;
+    var wait2 = false;
+    var currentStrength = "";
+    var nextStrength = "";
+
     function resetStrengthTexts(){
-        $('#strengthtext').animateCss('fadeOut');
-        $('#strengthtext').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $('#strengthtext').animateCss('zoomOut');
+        $('#strengthtext').one(animationEnd, function(){
             $('#strengthtext').text('STRENGTHS')
-            $('#strengthtext').animateCss('fadeIn');
+            $('#strengthtext').animateCss('zoomIn');
+            wait2 = false;
+            wait1 = false;
         });
     }
 
     $('.strength').hover(function(){
-        var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
-        $(this).animateCss(randAnimation);
-        var strengthtext = $(this).attr('alt');
-        $('#strengthtext').animateCss('fadeOutRight');
-        $('#strengthtext').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-            $('#strengthtext').text(strengthtext);
-            $('#strengthtext').animateCss('fadeInLeft');
-        });
+        nextStrength = $(this).attr('alt');
+        if (wait1 == false || currentStrength != nextStrength) {
+            wait1 = true;
+            currentStrength = nextStrength;
+            var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
+            $(this).animateCss(randAnimation);
+            $('#strengthtext').animateCss('zoomOut');
+            $('#strengthtext').one(animationEnd, function(){
+                $('#strengthtext').text(nextStrength);
+                $('#strengthdesc').text("testing");
+                $('#strengthtext').animateCss('zoomIn');
+                $('#strengthtext').one(animationEnd, function(){
+                })
+            });
+        }
     },function(){
-        setTimeout(resetStrengthTexts,7000);
+        if (wait2 == false) {
+            setTimeout(resetStrengthTexts,5000);
+            wait2 = true;
+        }
     });
 
   }); // end of document ready
