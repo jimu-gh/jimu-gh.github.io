@@ -93,10 +93,10 @@
     // Update background in regular intervals
     function updateBackground(){
         nextBackground();
-        setTimeout(updateBackground, 10000);
+        setTimeout(updateBackground, 30000);
     }
 
-    setTimeout(updateBackground, 10000);
+    setTimeout(updateBackground, 30000);
 
 	$("#topmsg").typed({
 		strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
@@ -108,7 +108,7 @@
         showCursor:false,
 	});
     $("#submsg").typed({
-		strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Trilingual Language Specialist<br>(8 yrs Int'l Experience)","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover"],
+		strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist<br>(8 yrs Int'l Experience)","PC Gamer (Hearthstone, mainly)",""],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
@@ -145,8 +145,26 @@
 
     $('#topmsg').animateCss('rubberBand');
 
+    $(window).scroll(function(){
+    var winScroll = $(this).scrollTop();
+    console.log(winScroll);
 
-    setTimeout("$('#submsg').animateCss('pulse');",5000)
+    // if(winScroll > $('.gallery_images').offset().top - ($(window).height()/1.2)){
+    //     $('.gallery_images figure').each(function(i){
+    //         setTimeout(function(){
+    //             $('.gallery_images figure').eq(i).addClass('is-showing');
+    //         }, 150 * (i+1));
+    //     });
+    // }
+
+         // if (winScroll > $('.gallery_images').offset().top - ($(window).height()/1.2)){
+          //   $('.gallery_images figure').each(function(){
+          //     setTimeout(function(i){
+          //       $('.gallery_images figure').eq(i).addClass('is-showing');
+          //     }, 150 * (i+1));
+          //   });
+          // }
+    });
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
