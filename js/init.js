@@ -1,14 +1,18 @@
 (function($){
   $(function(){
 
+    $("#strengths").css('overflow-y', 'hidden');
+    $("#strengths").scrollTop(0);
+    $("#strengths").css('overflow-y', 'auto');
+
     $(".jumper").on("click", function( e ) {
-        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-        } else {
+        // if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+        // } else {
             e.preventDefault();
             $("html, body").animate({
                 scrollTop: $( $(this).attr('href') ).offset().top
             }, 600);
-        }
+        // }
     });
 
     // CURRENT TIME
