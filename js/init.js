@@ -264,7 +264,7 @@
         }
         $(this).removeClass();
         $(this).addClass('strength');
-        $(this).addClass('white-text');
+        $(this).addClass('black-text');
     });
 
   }); // end of document ready
