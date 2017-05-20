@@ -210,10 +210,10 @@
         $('#strengthdesc').one(animationEnd, function(){
             $('#strengthdesc').html('<br>')
             $('#strengthdesc').animateCss('flipInX');
-            $('#strengthtext').animateCss('fadeOutRight');
+            $('#strengthtext').animateCss('flipOutY');
             $('#strengthtext').one(animationEnd, function(){
                 $('#strengthtext').text('STRENGTHS');
-                $('#strengthtext').animateCss('fadeInLeft');
+                $('#strengthtext').animateCss('flipInY');
             });
         });
         wait2 = false;
@@ -245,10 +245,10 @@
 
             $(this).addClass('red-text');
             $(this).animateCss(randAnimation);
-            $('#strengthtext').animateCss('fadeOutRight');
+            $('#strengthtext').animateCss('flipOutY');
             $('#strengthtext').one(animationEnd, function(){
                 $('#strengthtext').text(nextStrength);
-                $('#strengthtext').animateCss('fadeInLeft');
+                $('#strengthtext').animateCss('flipInY');
             });
             $('#strengthdesc').animateCss('flipOutX');
             $('#strengthdesc').one(animationEnd, function(){
