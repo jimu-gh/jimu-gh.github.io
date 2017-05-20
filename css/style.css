@@ -12,7 +12,7 @@ nav .brand-logo {
 }
 
 p {
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 .button-collapse {
@@ -43,9 +43,15 @@ p {
     margin-right: -.50rem;
     margin-top: .75rem;
 }
-.sideicon{
+.sideicon {
     width: 2rem;
 }
+
+.contacticon {
+    width:4.5rem;
+    margin:2rem;
+}
+
 
 @media only screen and (min-width: 993px) {
     .container{
@@ -62,12 +68,20 @@ p {
         position: absolute;
         top: 15%;
     }
+    .contacticon {
+        width:3.5rem;
+        margin:1rem;
+    }
 }
 
 @media only screen and (max-width : 600px) {
     .parallax-container .section {
         position: absolute;
         top: 15%;
+    }
+    .contacticon {
+        width:3rem;
+        margin:.5rem;
     }
 }
 
@@ -135,7 +149,7 @@ footer.page-footer {
     padding-top:7rem;
 }
 
-#portfolio {
+#work {
     margin-top:-11rem;
     padding-top:9rem;
 }
@@ -145,6 +159,14 @@ footer.page-footer {
     padding-top:5rem;
 }
 
-.projectheader{
+.projectdesc {
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+.projectlink {
+    display: inline-block;
+}
+
+.footertext {
+    display: inline-block;
 }

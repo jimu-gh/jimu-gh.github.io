@@ -13,21 +13,23 @@
         <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>
-        <div class="navbar-fixed">
+        <div class="navbar-fixed" id="navbarfixed">
             <nav class="black" role="navigation">
                 <div class="nav-wrapper container">
-                    <a id="logo-container" href="#" class="left brand-logo white-text dropdown-button" href="#!" data-activates="dropdown1">Jim1</a>
+                    <a id="logo-container" href="#" class="left brand-logo white-text dropdown-button" href="#!" data-activates="dropdown1">Jim</a>
                     <ul id="dropdown1" class="dropdown-content">
                         <li><a class="jumper black white-text" href="#strengths" data-sender="ScrollToMatch">strengths</a></li>
-                        <li><a class="jumper black white-text" href="#portfolio">portfolio</a></li>
+                        <li><a class="jumper black white-text" href="#work">work</a></li>
                         <li><a class="jumper black white-text" href="#contact">contact</a></li>
                     </ul>
 
                     <!-- MAIN NAVBAR BUTTONS -->
                     <ul class="right">
+                        <li><a href="mailto:jimothy@gmail.com" target="_blank"><img src="images/icon_email.png" class="topicon" id="email"></a></li>
                         <li><a href="https://www.linkedin.com/in/hojim" target="_blank"><img src="images/icon_linkedin.png" class="topicon" id="linkedin"></a></li>
                         <li><a href="https://www.github.com/zer8ne" target="_blank"><img src="images/icon_github.png" class="topicon" id="github"></a></li>
-                        <li><a href="mailto:jimothy@gmail.com" target="_blank"><img src="images/icon_email.png" class="topicon" id="email"></a></li>
+                        <li><a href="#!"><img src="images/icon_resume.png" class="topicon" id="resume"></a></li>
+                        <li><a href="https://www.instagram.com/j1m0thy" target="_blank"><img src="images/icon_instagram.png" class="topicon" id="instagram"></a></li>
                     </ul>
 
                 </div>
@@ -132,31 +134,26 @@
         </div>
 
         <div class="parallax-container valign-wrapper">
-            <div class="section no-pad-bot" id="portfolio">
+            <div class="section no-pad-bot" id="work">
                 <div class="container">
-                    <div class="row">
-                        <a name="portfolio"></a>
-                        <h3 class="header center white-text">PORTFOLIO</h3>
-                        <div class="col s12 m4 projectheader">
-                            <a href="https://github.com/zer8ne/bentome" target="_blank"><h4 class="header center white-text light">BentoMe</h4></a>
-                            <p class="flowtext"><b>Led a team as Project Head using Django to launch a fully online, self-sufficient bento lunch service with online meal delivery.</b><br />
-                            ·  Complete Stripe integration<br />
-                            ·  Daily menu (“du jour”) by trained Japanese chef<br />
-                            ·  Beta tested in Burbank, CA</p>
+                    <div class="row center">
+                        <a name="work"></a>
+                        <h3 class="header center white-text">WORK</h3>
+                        <div class="col s12 m4">
+                            <a href="#!"><h4 class="header center white-text light projectlink">BentoMe</h4></a>
+                            <h5 class="left-align">Led a team using Django to launch a fully online, self-sufficient bento lunch service with online meal delivery.</h5>
                         </div>
-                        <div class="col s12 m4 projectheader">
-                            <a href="https://github.com/noahneumark/voter_gab" target="_blank"><h4 class="header center white-text light">VoterGab</h4></a>
-                            <p class="light"><b>Took Lead UI/UX Designer role in creating an online voter community tool in MEAN using real data from Vote Smart API.</b><br />
-                            ·  Personal live feed of current state ballot measures<br />
-                            ·  User Groups/Endorsements<br />
-                            ·  Real-time Socket.IO chat </p>
+                        <div class="col s12 m4">
+                            <a href="#!"><h4 class="header center white-text light projectlink">VoterGab</h4></a>
+                            <h5 class="left-align">Took a Front-end role in creating an online voter community tool in MEAN using real data from Vote Smart API.</h5>
                         </div>
-                        <div class="col s12 m4 projectheader">
-                            <a href="https://github.com/zer8ne/pixeltune" target="_blank"><h4 class="header center white-text light">PixelTune</h4></a>
-                            <p class="flowtext"><b>Independently created an iOS camera application that suggests music based on image/emotion recognition via Google Cloud Vision.</b><br />
-                            ·  Emotion recognition for joy, sadness, sorrow, surprise<br />
-                            ·  Spotify user authentication<br />
-                            ·  Streaming in-app playlists</p>
+                        <div class="col s12 m4">
+                            <a href="#!"><h4 class="header center white-text light projectlink">PixelTune</h4></a>
+                            <h5 class="left-align">Solely created an iOS camera app that suggests music via on image recognition from Google Cloud Vision.</h5>
+                        </div>
+
+                        <div class="col s12 m12 projectdesc">
+
                         </div>
                     </div>
                 </div>
@@ -164,63 +161,34 @@
             <div class="parallax"><img src="images/bg2.png" alt="Unsplashed background img 2"></div>
         </div>
 
-        <div class="container">
-            <div class="section" id="contact">
-                <div class="row">
-                    <a name="contact"></a>
-                    <div class="col s12 center">
-                        <h3><i class="mdi-content-send brown-text"></i></h3>
-                        <h4>CONTACT</h4>
-                        <p class="left-align light">Feel free to email me!</p>
-                        <p class="left-align light">My resume is HERE for your convenience.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
 
-        <div class="parallax-container valign-wrapper">
-            <div class="section no-pad-bot">
-                <div class="container">
-                    <div class="row center">
-                        <h5 class="header col s12 blue-text darken-5 light">A modern responsive front-end framework based on Material Design</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="parallax"><img src="images/bg2.png" alt="Unsplashed background img 3"></div>
-        </div>
-
-        <footer class="page-footer cyan">
+        <footer class="page-footer blue lighten-5">
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Company Bio</h5>
-                        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+                <div class="section" id="contact">
+                    <div class="row">
+                        <a name="contact"></a>
+                        <div class="col s12 center">
+                            <h3 class="header center">CONTACT</h3>
+                            <h5 class="light">Please feel free to get in touch!</h5>
+                            <div class="col s12 center">
+                                <a href="mailto:jimothy@gmail.com"><img class="contacticon hoverable" src="images/email.png" /></a>
+                                <a href="https://www.linkedin.com/in/hojim" target="_blank"><img class="contacticon hoverable" src="images/linkedin.png" /></a>
+                                <a href="https://www.github.com/zer8ne" target="_blank"><img class="contacticon hoverable" src="images/github.png" /></a>
+                                <a href="#!" target="_blank"><img class="contacticon hoverable" src="images/resume.png" /></a>
+                                <a href="https://www.instagram.com/j1m0thy" target="_blank"><img class="contacticon hoverable" src="images/instagram.png" /></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Settings</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Connect</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    <h6 class="black-text right-align footertext">Jim Ho © <span id="today"></span></h6>
                 </div>
             </div>
         </footer>
+
          <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="js/materialize.js"></script>

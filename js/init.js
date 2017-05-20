@@ -17,13 +17,18 @@
 
     // CURRENT TIME
     var currentDate = new Date();
-
     var currentHour = currentDate.getHours();
-    var dateString = currentDate.toLocaleDateString();
-    var timeString = currentDate.toLocaleTimeString();
     if (currentHour < 3) {
         currentHour = 24;
     }
+
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var currentDay = currentDate.getDate();
+    var currentMonthIndex = currentDate.getMonth();
+    var currentYear = currentDate.getFullYear();
+
+    var today = monthNames[currentMonthIndex] + " " + currentYear
+    $("#today").text(today);
 
     // SET BACKGROUND TO CURRENT TIME
     function setCurrentBackground(){
@@ -183,6 +188,12 @@
           // }
     });
 
+    $('#email').hover(function(){
+        $('#email').attr('src','images/icon_email_hover.png');
+    },function(){
+        $('#email').attr('src','images/icon_email.png');
+    });
+
     $('#linkedin').hover(function(){
         $('#linkedin').attr('src','images/icon_linkedin_hover.png');
     },function(){
@@ -195,10 +206,16 @@
         $('#github').attr('src','images/icon_github.png');
     });
 
-    $('#email').hover(function(){
-        $('#email').attr('src','images/icon_email_hover.png');
+    $('#resume').hover(function(){
+        $('#resume').attr('src','images/icon_resume_hover.png');
     },function(){
-        $('#email').attr('src','images/icon_email.png');
+        $('#resume').attr('src','images/icon_resume.png');
+    });
+
+    $('#instagram').hover(function(){
+        $('#instagram').attr('src','images/icon_instagram_hover.png');
+    },function(){
+        $('#instagram').attr('src','images/icon_instagram.png');
     });
 
     var wait1 = false;
