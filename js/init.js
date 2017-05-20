@@ -146,6 +146,7 @@
     // ANIMATIONS
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     var animationList = ["bounce", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello"]
+    var animCount = 0;
     var colorList = ["red","purple","deep-purple","indigo","blue","light-blue","cyan","teal","green","light-green","lime","yellow","amber","orange","deep-orange"]
     var colorCount = 0;
 
@@ -240,7 +241,14 @@
         if (wait1 == false || currentStrength != nextStrength) {
             wait1 = true;
             currentStrength = nextStrength;
-            var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
+            // var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
+            var randAnimation = animationList[animCount];
+            console.log(randAnimation);
+            if (animationList.length == animCount){
+                animCount = 0;
+            } else {
+                animCount += 1;
+            }
 
             $(this).addClass('red-text');
 
@@ -263,7 +271,7 @@
         }
     }, function(){
         if (wait2 == false) {
-            setTimeout(resetStrengthTexts,5000);
+            setTimeout(resetStrengthTexts,20000);
             wait2 = true;
         }
         $(this).removeClass();
