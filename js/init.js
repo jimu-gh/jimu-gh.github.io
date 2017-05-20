@@ -144,11 +144,6 @@
     );
 
     // ANIMATIONS
-    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    var animationList = ["bounce", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello"]
-    var animCount = 0;
-    var colorList = ["red","purple","deep-purple","indigo","blue","light-blue","cyan","teal","green","light-green","lime","yellow","amber","orange","deep-orange"]
-    var colorCount = 0;
 
     $.fn.extend({
         animateCss: function (animationName) {
@@ -220,40 +215,44 @@
         wait1 = false;
     }
 
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    var animationList = ["bounce", "rubberBand", "shake", "swing", "flash", "tada", "wobble", "jello"]
+
+    var animationDict = {
+        'ADAPTABILITY':["deep-orange-text","swing"],
+        'COMMUNICATION':["cyan-text","rubberBand"],
+        'CREATIVITY':["amber-text","flash"],
+        'CLIENT SERVICE':["blue-text","tada"],
+        'DETAIL':["teal-text","shake"],
+        'EFFICIENCY':["green-text","jello"],
+        'EMPATHY':["pink-text","bounce"],
+        'LEADERSHIP':["grey-text","wobble"],
+        'LOGIC':["red-text","shake"],
+        'TEAMWORK':["purple-text","rubberBand"],
+        'VISION':["indigo-text","flash"],
+        'WORK ETHIC':["brown-text","bounce"]
+    };
+
+console.log(animationDict);
+
     $('.strength').hover(function(){
         nextStrength = $(this).attr('id');
         var nextDesc = $(this).attr('alt');
 
-        var textColor = colorList[colorCount] + "-text";
+        var textColor = animationDict[nextStrength][0];
 
         $(this).removeClass();
         $(this).addClass('strength');
         $(this).addClass(textColor);
 
-        // color change for next icon
-
-        if (colorList.length == colorCount){
-            colorCount = 0;
-        } else {
-            colorCount += 1;
-        }
-
         if (wait1 == false || currentStrength != nextStrength) {
             wait1 = true;
             currentStrength = nextStrength;
-            // var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
-            var randAnimation = animationList[animCount];
-            console.log(randAnimation);
-            if (animationList.length == animCount){
-                animCount = 0;
-            } else {
-                animCount += 1;
-            }
 
-            $(this).addClass('red-text');
+            iconAnimation = animationDict[nextStrength][1];
 
             // ICON ANIMATION
-            $(this).animateCss(randAnimation);
+            $(this).animateCss(iconAnimation);
 
             // STRENGTH AND STRENGTH DESCRIPTION ANIMATION
             $('#strengthtext').animateCss('fadeOut');
