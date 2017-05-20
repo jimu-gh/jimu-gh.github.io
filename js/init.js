@@ -2,7 +2,6 @@
   $(function(){
 
     $(".jumper").on("click", function( e ) {
-        console.log('hi');
         e.preventDefault();
         $("body, html").animate({
             scrollTop: $( $(this).attr('href') ).offset().top
@@ -210,11 +209,11 @@
         $('#strengthdesc').one(animationEnd, function(){
             $('#strengthdesc').html('<br>')
             $('#strengthdesc').animateCss('flipInX');
-            $('#strengthtext').animateCss('flipOutY');
-            $('#strengthtext').one(animationEnd, function(){
-                $('#strengthtext').text('STRENGTHS');
-                $('#strengthtext').animateCss('flipInY');
-            });
+        });
+        $('#strengthtext').animateCss('flipOutY');
+        $('#strengthtext').one(animationEnd, function(){
+            $('#strengthtext').text('STRENGTHS');
+            $('#strengthtext').animateCss('flipInY');
         });
         wait2 = false;
         wait1 = false;
@@ -245,10 +244,10 @@
 
             $(this).addClass('red-text');
             $(this).animateCss(randAnimation);
-            $('#strengthtext').animateCss('flipOutY');
+            $('#strengthtext').animateCss('fadeOut');
             $('#strengthtext').one(animationEnd, function(){
                 $('#strengthtext').text(nextStrength);
-                $('#strengthtext').animateCss('flipInY');
+                $('#strengthtext').animateCss('fadeIn');
             });
             $('#strengthdesc').animateCss('flipOutX');
             $('#strengthdesc').one(animationEnd, function(){
@@ -259,7 +258,7 @@
         }
     }, function(){
         if (wait2 == false) {
-            setTimeout(resetStrengthTexts,15000);
+            setTimeout(resetStrengthTexts,5000);
             wait2 = true;
         }
         $(this).removeClass();
