@@ -1,28 +1,15 @@
 (function($){
   $(function(){
 
-
-
     $(".jumper").on("click", function( e ) {
-        e.preventDefault();
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-            alert("hey");
-            window.setTimeout(function() {window.scrollTo(500,1600);}, 0);
-        }else{
-            alert("ho");
-            $('html,body').animate({
-                scrollTop: 100,
-                scrollLeft: 200
-            }, 800, function(){
-                $('html,body').clearQueue();
-            });
-            $("body, html").animate({
+
+        } else {
+            e.preventDefault();
+            $("html, body").animate({
                 scrollTop: $( $(this).attr('href') ).offset().top
             }, 600);
         }
-        // $("body, html").animate({
-        //     scrollTop: $( $(this).attr('href') ).offset().top
-        // }, 600);
     });
 
     // CURRENT TIME
@@ -246,8 +233,6 @@
         'VISION':["indigo-text","flash"],
         'WORK ETHIC':["brown-text","bounce"]
     };
-
-console.log(animationDict);
 
     $('.strength').hover(function(){
         nextStrength = $(this).attr('id');
