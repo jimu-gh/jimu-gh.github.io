@@ -6,7 +6,7 @@
     $(".jumper").on("click", function( e ) {
         e.preventDefault();
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-            window.scrollTo(200,600) // first value for left offset, second value for top offset
+            window.scrollTo(200,1600) // first value for left offset, second value for top offset
         }else{
             $('html,body').animate({
                 scrollTop: 100,
@@ -133,7 +133,7 @@
         showCursor:false,
     });
     $("#submsg").typed({
-        strings: [":^500D","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist"],
+        strings: [":^500)","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist"],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
