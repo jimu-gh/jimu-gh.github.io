@@ -1,26 +1,6 @@
 (function($){
   $(function(){
 
-    scrollioreceiver = function(sender) {
-
-        $(sender).on({
-            click: sentFrom
-        });
-
-        function sentFrom(){
-            var dataMine = $(this).attr('data-sender'),
-            dataSend = $('[data-receiver="'+dataMine+'"]');
-
-            $('html, body').animate({
-                scrollTop: $(dataSend).offset().top - 70
-            }, 800, function() {
-            // if you need a callback function
-            });
-        }
-    }
-
-    scrollioreceiver('[data-sender]');
-
     $(".jumper").on("click", function( e ) {
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
         } else {

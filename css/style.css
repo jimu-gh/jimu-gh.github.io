@@ -15,10 +15,6 @@ p {
   line-height: 2rem;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 .button-collapse {
   color: white;
   position:relative;
