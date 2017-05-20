@@ -205,15 +205,15 @@
     var nextStrength = "";
 
     function resetStrengthTexts(){
-        $('#strengthdesc').animateCss('flipOutX');
+        $('#strengthdesc').animateCss('fadeOutRight');
         $('#strengthdesc').one(animationEnd, function(){
             $('#strengthdesc').html('<br>')
-            $('#strengthdesc').animateCss('flipInX');
+            $('#strengthdesc').animateCss('fadeInLeft');
         });
-        $('#strengthtext').animateCss('flipOutY');
+        $('#strengthtext').animateCss('fadeOut');
         $('#strengthtext').one(animationEnd, function(){
             $('#strengthtext').text('STRENGTHS');
-            $('#strengthtext').animateCss('flipInY');
+            $('#strengthtext').animateCss('fadeIn');
         });
         wait2 = false;
         wait1 = false;
@@ -243,17 +243,22 @@
             var randAnimation = animationList[Math.floor(Math.random()*animationList.length)];
 
             $(this).addClass('red-text');
+
+            // ICON ANIMATION
             $(this).animateCss(randAnimation);
+
+            // STRENGTH AND STRENGTH DESCRIPTION ANIMATION
             $('#strengthtext').animateCss('fadeOut');
             $('#strengthtext').one(animationEnd, function(){
                 $('#strengthtext').text(nextStrength);
                 $('#strengthtext').animateCss('fadeIn');
             });
-            $('#strengthdesc').animateCss('flipOutX');
+
+            $('#strengthdesc').animateCss('fadeOutRight');
             $('#strengthdesc').one(animationEnd, function(){
                 $('#strengthdesc').text(nextStrength);
                 $('#strengthdesc').text(nextDesc);
-                $('#strengthdesc').animateCss('flipInX');
+                $('#strengthdesc').animateCss('fadeInLeft');
             });
         }
     }, function(){
