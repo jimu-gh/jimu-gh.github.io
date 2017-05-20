@@ -1,12 +1,26 @@
 (function($){
   $(function(){
 
+
+
     $(".jumper").on("click", function( e ) {
         e.preventDefault();
-        $("body, html").animate({
-            scrollTop: $( $(this).attr('href') ).offset().top
-        }, 600);
-
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+            window.scrollTo(200,100) // first value for left offset, second value for top offset
+        }else{
+            $('html,body').animate({
+                scrollTop: 100,
+                scrollLeft: 200
+            }, 800, function(){
+                $('html,body').clearQueue();
+            });
+            $("body, html").animate({
+                scrollTop: $( $(this).attr('href') ).offset().top
+            }, 600);
+        }
+        // $("body, html").animate({
+        //     scrollTop: $( $(this).attr('href') ).offset().top
+        // }, 600);
     });
 
     // CURRENT TIME
@@ -216,8 +230,6 @@
     }
 
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    var animationList = ["bounce", "rubberBand", "shake", "swing", "flash", "tada", "wobble", "jello"]
-
     var animationDict = {
         'ADAPTABILITY':["deep-orange-text","swing"],
         'COMMUNICATION':["cyan-text","rubberBand"],
@@ -270,7 +282,7 @@ console.log(animationDict);
         }
     }, function(){
         if (wait2 == false) {
-            setTimeout(resetStrengthTexts,20000);
+            setTimeout(resetStrengthTexts,30000);
             wait2 = true;
         }
         $(this).removeClass();
