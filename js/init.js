@@ -6,17 +6,10 @@
     $(".jumper").on("click", function( e ) {
         e.preventDefault();
         if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-            // window.scrollTo(200,1600) // first value for left offset, second value for top offset
-            $('body').animate({
-                scrollTop: 100,
-                scrollLeft: 200
-            }, 800, function(){
-                $('html,body').clearQueue();
-            });
-            $("body").animate({
-                scrollTop: $( $(this).attr('href') ).offset().top
-            }, 600);
+            alert("hey");
+            window.setTimeout(function() {window.scrollTo(500,1600);}, 0);
         }else{
+            alert("ho");
             $('html,body').animate({
                 scrollTop: 100,
                 scrollLeft: 200
