@@ -4,8 +4,7 @@
     $(".jumper").on("click", function( e ) {
         var target = $($(this).attr('href'));
         target.css('overflow-y', 'hidden');
-        target.scrollTop(0);
-        target.css('overflow-y', 'auto');
+
         // if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
         // } else {
             e.preventDefault();
@@ -13,6 +12,7 @@
                 scrollTop: $( $(this).attr('href') ).offset().top
             }, 600);
         // }
+        target.css('overflow-y', 'auto');
     });
 
     // CURRENT TIME
