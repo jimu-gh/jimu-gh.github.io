@@ -1,11 +1,11 @@
 (function($){
   $(function(){
 
-    $("#strengths").css('overflow-y', 'hidden');
-    $("#strengths").scrollTop(0);
-    $("#strengths").css('overflow-y', 'auto');
-
     $(".jumper").on("click", function( e ) {
+        var target = $($(this).attr('href'));
+        target.css('overflow-y', 'hidden');
+        target.scrollTop(0);
+        target.css('overflow-y', 'auto');
         // if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
         // } else {
             e.preventDefault();
