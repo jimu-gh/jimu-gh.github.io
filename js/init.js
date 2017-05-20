@@ -205,10 +205,10 @@
     var nextStrength = "";
 
     function resetStrengthTexts(){
-        $('#strengthdesc').animateCss('fadeOutRight');
+        $('#strengthdesc').animateCss('zoomOut');
         $('#strengthdesc').one(animationEnd, function(){
             $('#strengthdesc').html('<br>')
-            $('#strengthdesc').animateCss('fadeInLeft');
+            $('#strengthdesc').animateCss('zoomIn');
         });
         $('#strengthtext').animateCss('fadeOut');
         $('#strengthtext').one(animationEnd, function(){
@@ -254,11 +254,11 @@
                 $('#strengthtext').animateCss('fadeIn');
             });
 
-            $('#strengthdesc').animateCss('fadeOutRight');
+            $('#strengthdesc').animateCss('zoomOut');
             $('#strengthdesc').one(animationEnd, function(){
                 $('#strengthdesc').text(nextStrength);
                 $('#strengthdesc').text(nextDesc);
-                $('#strengthdesc').animateCss('fadeInLeft');
+                $('#strengthdesc').animateCss('zoomIn');
             });
         }
     }, function(){
