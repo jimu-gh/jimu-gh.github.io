@@ -1,18 +1,19 @@
 (function($){
   $(function(){
 
-    $(".jumper").on("click", function( e ) {
-        var target = $($(this).attr('href'));
-        target.css('overflow-y', 'hidden');
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+        $('.topicon').hide();
+        $('#dropdown1').html("");
+    } else {
+        $('.topicon').show();
 
-        // if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-        // } else {
-            e.preventDefault();
-            $("html, body").animate({
-                scrollTop: $( $(this).attr('href') ).offset().top
-            }, 600);
-        // }
-        target.css('overflow-y', 'auto');
+    }
+
+    $(".jumper").on("click", function( e ) {
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: $( $(this).attr('href') ).offset().top
+        }, 600);
     });
 
     // CURRENT TIME
