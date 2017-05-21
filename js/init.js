@@ -4,9 +4,10 @@
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
         $('.topicon').hide();
         $('#dropdown1').html("");
+        $('#slideoutmenu').show();
     } else {
         $('.topicon').show();
-
+        $('#slideoutmenu').hide();
     }
 
     $(".jumper").on("click", function( e ) {
