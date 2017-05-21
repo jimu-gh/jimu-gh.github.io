@@ -14,7 +14,6 @@
     }
 
     // Scroll jump from dropdown
-
     $(".jumper").on("click", function( e ) {
         e.preventDefault();
         $("html, body").animate({
@@ -46,9 +45,11 @@
     }
     setCurrentBackground();
 
-    // Initialize collapse button and parallax
+    // Initialize collapse button, parallax, and carousel
     $(".button-collapse").sideNav();
     $('.parallax').parallax();
+    // $('.carousel').carousel({fullWidth: true, indicators: true});
+    $('ul.tabs').tabs();
 
     // Custom greeting based on time
     var haveANiceDayStr = ""
@@ -71,6 +72,7 @@
             return parseInt($('#bg1').attr("src")[7]+$('#bg1').attr("src")[8]);
         }
     }
+
     // Text color flip
     function TextToWhite(){
         $('#parallaxbg').removeClass('white');
@@ -286,6 +288,7 @@
             Materialize.showStaggeredList($('#skills1'));
             setTimeout("Materialize.showStaggeredList($('#skills2'))",500);
             setTimeout("Materialize.showStaggeredList($('#skills3'))",1000);
+            setTimeout("Materialize.showStaggeredList($('#skills4'))",1500);
         }}
     ];
     Materialize.scrollFire(options);
