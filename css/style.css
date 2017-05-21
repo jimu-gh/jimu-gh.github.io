@@ -62,6 +62,10 @@ p {
     background-color: #555555;
 }
 
+.initial-hidden {
+    opacity: 0;
+}
+
 @media only screen and (min-width: 993px) {
     .container{
         /*background-color: red;*/
@@ -174,6 +178,14 @@ footer.page-footer {
 #strengths {
     margin-top:-7rem;
     padding-top:7rem;
+}
+
+#skillstext{
+    margin-top:-0.25rem;
+}
+
+.skill {
+    margin-bottom:1.5rem;
 }
 
 #work {
