@@ -35,7 +35,7 @@
 
     // SET BACKGROUND TO CURRENT TIME
     function setCurrentBackground(){
-        if (currentHour >= 21 || currentHour < 6) {
+        if (currentHour >= 18 || currentHour < 6) {
             TextToWhite()
         }
         // LUMP IN 3'S
