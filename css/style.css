@@ -163,6 +163,12 @@ footer.page-footer {
   -webkit-animation-iteration-count: 1;
 }
 
+#logo-container {
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
 /* tweak the below to adjust linkscroll destinations */
 
 #strengths {
