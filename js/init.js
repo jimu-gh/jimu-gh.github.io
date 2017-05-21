@@ -7,7 +7,7 @@
         $('#slideoutmenu').show();
     } else {
         $('.topicon').show();
-        $('#slideoutmenu').hide();
+        // $('#slideoutmenu').hide();
     }
 
     $(".jumper").on("click", function( e ) {
