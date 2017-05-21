@@ -4,10 +4,11 @@
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
         $('.topicon').hide();
         $('#dropdown1').html("");
-        $('#slideoutmenu').show();
+        $('#logo-container').removeClass('dropdown-button');
+        $('#logo-container').addClass('button-collapse');
+        $('#logo-container').attr('data-activates','slide-out');
     } else {
         $('.topicon').show();
-        // $('#slideoutmenu').hide();
     }
 
     $(".jumper").on("click", function( e ) {

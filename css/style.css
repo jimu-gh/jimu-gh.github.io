@@ -15,11 +15,6 @@ p {
   line-height: 1.5rem;
 }
 
-.nav-fixed {
-    position: fixed;
-    z-index: 998;
-}
-
 .button-collapse {
   color: white;
   position:relative;
