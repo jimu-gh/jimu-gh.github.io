@@ -86,6 +86,9 @@ p {
     .skill {
         margin-bottom:1.25rem;
     }
+    .projectname {
+        font-size:2.25rem;
+    }
 }
 
 @media only screen and (max-width : 992px) {
@@ -129,8 +132,8 @@ p {
         font-size:1rem;
     }
     .skill {
-        font-size:1rem;
-        margin-bottom:0rem;
+        font-size:1.25rem;
+        margin-bottom:-0.25rem;
     }
 }
 
@@ -199,39 +202,37 @@ footer.page-footer {
 
 /* tweak the below to adjust linkscroll destinations */
 
-#strengths {
-    margin-top:-7rem;
-    padding-top:7rem;
+#about {
+    margin-top:-4rem;
+    padding-top:3.5rem;
+    margin-bottom:-2rem;
 }
 
-#skillstitle{
-    margin-top:-5rem;
+#skills {
+    margin-top:-8rem;
+    padding-top:3rem;
 }
-
 
 #work {
-    margin-top:-8rem;
-    padding-top:9rem;
-}
-
-#worktitle {
-
+    margin-top:-4rem;
+    padding-top:3.5rem;
 }
 
 #contact {
-    margin-top:-5rem;
-    padding-top:5rem;
+    margin-top:-4rem;
+    padding-top:2rem;
+    margin-bottom:-1.5rem;
 }
 
-.projectdesc {
+.skilllist {
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 1.5rem;
 }
 
-.projectlink {
-    display: inline-block;
-}
-
 .tab a h5{
     text-transform: none;
+}
+
+.tabs .indicator {
+    background-color: black;
 }

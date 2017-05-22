@@ -7,6 +7,7 @@
         $('.topicon').hide();
         $('#dropdown1').html("");
         $('#logo-container').removeClass('dropdown-button');
+        $('#logo-container').removeClass('jumper');
         $('#logo-container').addClass('button-collapse');
         $('#logo-container').attr('data-activates','slide-out');
     } else {
