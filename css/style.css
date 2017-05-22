@@ -27,12 +27,6 @@ p {
     margin-left: -.5rem;
 }
 
-.topicon{
-    width: 2.5rem;
-    margin-left: -.50rem;
-    margin-right: -.50rem;
-    margin-top: .75rem;
-}
 .sideicon {
     width: 2rem;
 }
@@ -62,6 +56,12 @@ p {
     font-size:1.5rem;
 }
 
+.topicon{
+    width: 3rem;
+    margin-left: -.50rem;
+    margin-right: -.50rem;
+    margin-top: .75rem;
+}
 
 @media only screen and (min-width: 993px) {
     .container{
@@ -131,6 +131,13 @@ p {
     .icon-block {
         margin-bottom:-3.5rem;
     }
+    .topbutton {
+        margin-right:-0.9rem;
+    }
+    .topicon{
+        width: 2.5rem;
+    }
+
 }
 
 .icon-block {
