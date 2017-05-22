@@ -226,18 +226,18 @@
 
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     var animationDict = {
-        'ADAPTABILITY':["deep-orange-text","swing"],
-        'COMMUNICATION':["cyan-text","rubberBand"],
-        'CREATIVITY':["amber-text","flash"],
-        'CLIENT SERVICE':["blue-text","tada"],
-        'DETAIL':["teal-text","shake"],
-        'EFFICIENCY':["green-text","jello"],
-        'EMPATHY':["pink-text","tada"],
-        'LEADERSHIP':["grey-text","wobble"],
-        'LOGIC':["red-text","shake"],
-        'TEAMWORK':["purple-text","rubberBand"],
-        'VISION':["indigo-text","flash"],
-        'WORK ETHIC':["brown-text","bounce"]
+        'Adaptability':["deep-orange-text","swing"],
+        'Client Service':["blue-text","tada"],
+        'Communication':["cyan-text","rubberBand"],
+        'Creativity':["amber-text","flash"],
+        'Detail':["teal-text","shake"],
+        'Efficiency':["green-text","jello"],
+        'Empathy':["pink-text","tada"],
+        'Leadership':["grey-text","wobble"],
+        'Logic':["red-text","shake"],
+        'Teamwork':["purple-text","rubberBand"],
+        'Vision':["indigo-text","flash"],
+        'Work Ethic':["brown-text","bounce"]
     };
 
     $('.strength').hover(function(){

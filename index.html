@@ -18,10 +18,9 @@
                 <div class="nav-wrapper container">
                     <a id="logo-container" href="#top" class="left jumper brand-logo white-text dropdown-button animated fadeInLeftBig" href="#!" data-activates="dropdown1">&nbsp;&nbsp;<img src="images/jim.jpg" class="circle"/>&nbsp;&nbsp;Jim Ho&nbsp;&nbsp;</a>
                     <ul id="dropdown1" class="dropdown-content">
-                        <li><a class="jumper white-text" href="#about">about</a></li>
-                        <li><a class="jumper white-text" href="#skills">skills</a></li>
-                        <li><a class="jumper white-text" href="#work">work</a></li>
-                        <li><a class="jumper white-text" href="#contact">contact</a></li>
+                        <li><a class="jumper white-text" href="#projects">Projects|About</a></li>
+                        <li><a class="jumper white-text" href="#skills">Skills</a></li>
+                        <li><a class="jumper white-text" href="#contact">Contact</a></li>
                     </ul>
                     <!-- MAIN NAVBAR BUTTONS -->
                     <ul class="right">
@@ -68,81 +67,125 @@
         </div>
 
         <div class="container">
-            <div class="section" id="about">
+            <div class="section" id="projects">
+                <h3 class="header center black-text" id="worktitle">Projects</h3>
+
                 <div class="row">
-                    <!-- <a name="about"></a> -->
-                    <h3 class="header center" id="strengthtext">ABOUT ME</h3>
+                    <!-- <a name="projects"></a> -->
+                    <ul id="tabs-swipe-demo" class="tabs">
+                        <li class="tab col s3"><a class="active blue-text text-darken-3" href="#swipe-project1"><h5 class="projectname">BentoMe</h5></a></li>
+                        <li class="tab col s3"><a class="red-text text-darken-3" href="#swipe-project2"><h5 class="projectname">VoterGab</h5></a></li>
+                        <li class="tab col s3"><a class="green-text text-darken-3" href="#swipe-project3"><h5 class="projectname">PixelTune</h5></a></li>
+                        <li class="tab col s3"><a class="amber-text text-darken-3" href="#swipe-project4"><h5 class="projectname">HomeSafe </h5></a></li>
+                    </ul>
+                    <br />
+                    <div id="swipe-project1" class="col s12">
+                        <h5 class="left-align flow-text">For this project, I led a local team in the development and launch of a fully online, self-sufficient <b>Japanese bento delivery service</b> as a <a href="https://www.djangoproject.com/" target="_blank" class="blue-text text-darken-2"><u>Django</u></a> project on <a href="https://aws.amazon.com" target="_blank" class="blue-text text-darken-2"><u>AWS</u></a>. I wanted to create a simple, yet powerful outlet for chefs to provide meals to wider markets, and with more flexibility. </h5>
+                        <h6 class="flow-text">&nbsp;• Featuring complete <a href="https://www.stripe.com" target="_blank" class="blue-text text-darken-2"><u>Stripe</u></a> integration</h6>
+                        <h6 class="flow-text">&nbsp;• Daily menu (“du jour”) by trained native Japanese chef</h6>
+                        <h6 class="flow-text">&nbsp;• Beta tested in Burbank, California</h6>
+                        <br />
+                        <a class="waves-effect waves-light btn-large blue darken-2" href="https://www.github.com/zer8ne/bentome" target="_blank" >GitHub</a>
+                    </div>
+                    <div id="swipe-project2" class="col s12">
+                        <h5 class="left-align black-text flow-text">I worked jointly with CA Assembly District Delegates to create an <b>online voter community tool</b> in the <a href="http://mean.io" target="_blank" class="red-text text-darken-2"><u>MEAN</u></a> stack, using real live data from <a href="https://votesmart.org/share/api" target="_blank" class="red-text text-darken-2"><u>Vote Smart API</u></a>. After the presidential election of 2016, I felt the need to contribute toward voter information and organization.</h5>
+                        <h6 class="flow-text">&nbsp;• Personal live feed of current state ballot measures</h6>
+                        <h6 class="flow-text">&nbsp;• User Groups/Endorsements system with quorum feature</h6>
+                        <h6 class="flow-text">&nbsp;• Real-time <a href="https://socket.io/" target="_blank" class="red-text text-darken-2"><u>Socket.IO</u></a> chat (global and groups)</h6>
+                        <br />
+                        <a class="waves-effect waves-light btn-large red darken-2" href="https://github.com/noahneumark/voter_gab" target="_blank" >GitHub</a>
+                    </div>
+                    <div id="swipe-project3" class="col s12">
+                        <h5 class="left-align black-text flow-text">With PixelTune, I independently created an <b>iOS camera app</b> that suggests music recommendations based on image recognition from <a href="https://cloud.google.com/vision/" target="_blank" class="green-text text-darken-2"><u>Google Cloud Vision</u></a>. I've always been fascinated with the synaesthetic aspect of how 1's and 0's can make us "feel".</h5>
+                        <h6 class="flow-text">&nbsp;• Support for emotion recognition: joy, sadness, sorrow, surprise</h6>
+                        <h6 class="flow-text">&nbsp;• <a href="https://github.com/spotify/ios-sdk" target="_blank" class="green-text text-darken-2"><u>Spotify SDK</u></a> user authentication (Facebook support)</h6>
+                        <h6 class="flow-text">&nbsp;• In-app streaming using <a href="https://developer.spotify.com/web-api/" target="_blank" class="green-text text-darken-2"><u>Spotify Web API</u></a></h6>
+                        <br />
+                        <a class="waves-effect waves-light btn-large green darken-2" href="https://www.github.com/zer8ne/pixeltune" target="_blank" >GitHub</a>
+                    </div>
+                    <div id="swipe-project4" class="col s12">
+                        <h5 class="left-align black-text flow-text">In creating this <b>Augmented Reality game</b>, I wanted to experiment with <a href="https://developer.apple.com/reference/corelocation" target="_blank" class="amber-text text-darken-2"><u>iOS CoreLocation</u></a> to make something easy and fun to play while maintaining replay value. In HomeSafe, the player's goal is to reach a target location on the map (by actually walking) without running into randomly generated virtual monsters.</h5>
+                        <h6 class="flow-text">&nbsp;• Uses live GPS to track user and monster location</h6>
+                        <h6 class="flow-text">&nbsp;• "Smart" and random monster pathing</h6>
+                        <h6 class="flow-text">&nbsp;• Conceived and created in a single day</h6>
+                        <br />
+                        <a class="waves-effect waves-light btn-large amber darken-2" href="https://www.github.com/zer8ne/homesafe" target="_blank" >GitHub</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="header center" id="strengthtext">About</h3>
                     <h5 class="header center" id="strengthdesc"><br /></h5>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I learn quickly to fit any situation" id="ADAPTABILITY"><i class="material-icons">extension</i></h1>
+                            <h1 class="black-text strength" alt="I learn quickly to fit any situation" id="Adaptability"><i class="material-icons">extension</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Chinese and Japanese fluency" id="COMMUNICATION"><i class="material-icons">translate</i></h1>
+                            <h1 class="black-text strength" alt="8 years of client service in Japan" id="Client service"><i class="material-icons">star</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Realizing ideas with technology" id="CREATIVITY"><i class="material-icons">wb_incandescent</i></h1>
+                            <h1 class="black-text strength" alt="Chinese and Japanese fluency" id="Communication"><i class="material-icons">translate</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="8 years of client service in Japan" id="CLIENT SERVICE"><i class="material-icons">star</i></h1>
+                            <h1 class="black-text strength" alt="Realizing ideas with technology" id="Creativity"><i class="material-icons">wb_incandescent</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Certified translator &amp; proofreader" id="DETAIL"><i class="material-icons">find_in_page</i></h1>
+                            <h1 class="black-text strength" alt="Certified translator &amp; proofreader" id="Detail"><i class="material-icons">find_in_page</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I make more happen, for less" id="EFFICIENCY"><i class="material-icons">trending_up</i></h1>
+                            <h1 class="black-text strength" alt="I make more happen, for less" id="Efficiency"><i class="material-icons">trending_up</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I enjoy understanding people" id="EMPATHY"><i class="material-icons">favorite</i></h1>
+                            <h1 class="black-text strength" alt="I enjoy understanding people" id="Empathy"><i class="material-icons">favorite</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="If direction is necessary, I can lead" id="LEADERSHIP"><i class="material-icons">flag</i></h1>
+                            <h1 class="black-text strength" alt="If direction is necessary, I can lead" id="Leadership"><i class="material-icons">flag</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I love long algorithms on the beach" id="LOGIC"><i class="material-icons">casino</i></h1>
+                            <h1 class="black-text strength" alt="I love long algorithms on the beach" id="Logic"><i class="material-icons">casino</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Natural ability to work with anyone" id="TEAMWORK"><i class="material-icons">people</i></h1>
+                            <h1 class="black-text strength" alt="Natural ability to work with anyone" id="Teamwork"><i class="material-icons">people</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="My eye stays on the big picture" id="VISION"><i class="material-icons">visibility</i></h1>
+                            <h1 class="black-text strength" alt="My eye stays on the big picture" id="Vision"><i class="material-icons">visibility</i></h1>
                         </div>
                     </div>
 
                     <div class="col s4 m3">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I strive 24/7 for client satisfaction" id="WORK ETHIC"><i class="material-icons">fitness_center</i></h1>
+                            <h1 class="black-text strength" alt="I strive 24/7 for client satisfaction" id="Work Ethic"><i class="material-icons">fitness_center</i></h1>
                         </div>
                     </div>
                 </div>
@@ -154,7 +197,7 @@
                 <div class="container">
                     <div class="row center">
                         <!-- <a name="skills"></a> -->
-                        <h3 class="header center white-text" id='skillstitle'>SKILLS &amp; TECHNOLOGY</h3>
+                        <h3 class="header center white-text" id='skillstitle'>skills</h3>
                         <div class="col s12 m12 skilllist">
                             <div class="col m3 s6 white-text">
                                 <ul id="skills1">
@@ -203,54 +246,6 @@
             <div class="parallax"><img src="images/bg2.jpg" alt="Unsplashed background img 2"></div>
         </div>
 
-        <div class="container">
-            <div class="section" id="work">
-                <div class="row">
-                    <!-- <a name="work"></a> -->
-                    <h3 class="header center black-text" id="worktitle">PROJECT PORTFOLIO</h3>
-                    <ul id="tabs-swipe-demo" class="tabs">
-                        <li class="tab col s3"><a class="active blue-text text-darken-3" href="#swipe-project1"><h5 class="projectname">BentoMe</h5></a></li>
-                        <li class="tab col s3"><a class="red-text text-darken-3" href="#swipe-project2"><h5 class="projectname">VoterGab</h5></a></li>
-                        <li class="tab col s3"><a class="green-text text-darken-3" href="#swipe-project3"><h5 class="projectname">PixelTune</h5></a></li>
-                        <li class="tab col s3"><a class="amber-text text-darken-3" href="#swipe-project4"><h5 class="projectname">HomeSafe </h5></a></li>
-                    </ul>
-                    <br />
-                    <div id="swipe-project1" class="col s12">
-                        <h5 class="left-align flow-text">For this project, I led a local team in the development and launch of a fully online, self-sufficient <b>Japanese bento delivery service</b> as a <a href="https://www.djangoproject.com/" target="_blank" class="blue-text text-darken-2"><u>Django</u></a> project on <a href="https://aws.amazon.com" target="_blank" class="blue-text text-darken-2"><u>AWS</u></a>. I wanted to create a simple, yet powerful outlet for chefs to provide meals to wider markets, and with more flexibility. </h5>
-                        <h6 class="flow-text">&nbsp;• Featuring complete <a href="https://www.stripe.com" target="_blank" class="blue-text text-darken-2"><u>Stripe</u></a> integration</h6>
-                        <h6 class="flow-text">&nbsp;• Daily menu (“du jour”) by trained native Japanese chef</h6>
-                        <h6 class="flow-text">&nbsp;• Beta tested in Burbank, California</h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large blue darken-2" href="https://www.github.com/zer8ne/bentome" target="_blank" >GitHub</a>
-                    </div>
-                    <div id="swipe-project2" class="col s12">
-                        <h5 class="left-align black-text flow-text">I worked jointly with CA Assembly District Delegates to create an <b>online voter community tool</b> in the <a href="http://mean.io" target="_blank" class="red-text text-darken-2"><u>MEAN</u></a> stack, using real live data from <a href="https://votesmart.org/share/api" target="_blank" class="red-text text-darken-2"><u>Vote Smart API</u></a>. After the presidential election of 2016, I felt the need to contribute toward voter information and organization.</h5>
-                        <h6 class="flow-text">&nbsp;• Personal live feed of current state ballot measures</h6>
-                        <h6 class="flow-text">&nbsp;• User Groups/Endorsements system with quorum feature</h6>
-                        <h6 class="flow-text">&nbsp;• Real-time <a href="https://socket.io/" target="_blank" class="red-text text-darken-2"><u>Socket.IO</u></a> chat (global and groups)</h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large red darken-2" href="https://github.com/noahneumark/voter_gab" target="_blank" >GitHub</a>
-                    </div>
-                    <div id="swipe-project3" class="col s12">
-                        <h5 class="left-align black-text flow-text">With PixelTune, I independently created an <b>iOS camera app</b> that suggests music recommendations based on image recognition from <a href="https://cloud.google.com/vision/" target="_blank" class="green-text text-darken-2"><u>Google Cloud Vision</u></a>. I've always been fascinated with the synaesthetic aspect of how 1's and 0's can make us "feel".</h5>
-                        <h6 class="flow-text">&nbsp;• Support for emotion recognition: joy, sadness, sorrow, surprise</h6>
-                        <h6 class="flow-text">&nbsp;• <a href="https://github.com/spotify/ios-sdk" target="_blank" class="green-text text-darken-2"><u>Spotify SDK</u></a> user authentication (Facebook support)</h6>
-                        <h6 class="flow-text">&nbsp;• In-app streaming using <a href="https://developer.spotify.com/web-api/" target="_blank" class="green-text text-darken-2"><u>Spotify Web API</u></a></h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large green darken-2" href="https://www.github.com/zer8ne/pixeltune" target="_blank" >GitHub</a>
-                    </div>
-                    <div id="swipe-project4" class="col s12">
-                        <h5 class="left-align black-text flow-text">In creating this <b>Augmented Reality game</b>, I wanted to experiment with <a href="https://developer.apple.com/reference/corelocation" target="_blank" class="amber-text text-darken-2"><u>iOS CoreLocation</u></a> to make something easy and fun to play while maintaining replay value. In HomeSafe, the player's goal is to reach a target location on the map (by actually walking) without running into randomly generated virtual monsters.</h5>
-                        <h6 class="flow-text">&nbsp;• Uses live GPS to track user and monster location</h6>
-                        <h6 class="flow-text">&nbsp;• "Smart" and random monster pathing</h6>
-                        <h6 class="flow-text">&nbsp;• Conceived and created in a single day</h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large amber darken-2" href="https://www.github.com/zer8ne/homesafe" target="_blank" >GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <footer class="page-footer light-blue lighten-5">
             <div class="container">
@@ -258,7 +253,7 @@
                     <div class="row">
                         <!-- <a name="contact"></a> -->
                         <div class="col s12 center">
-                            <h3 class="header center">CONTACT</h3>
+                            <h3 class="header center">contact</h3>
                             <h5 class="light">Feel free to get in touch with me!</h5>
                             <div class="col s12 center">
                                 <a href="mailto:jimothy@gmail.com"><img class="contacticon hoverable" src="images/email.png" /></a>
