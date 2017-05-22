@@ -127,6 +127,9 @@ p {
         font-size:1.25rem;
         margin-bottom:-0.3rem;
     }
+    #closingmsg {
+        font-size:1.5rem;
+    }
 }
 
 .icon-block {
@@ -194,7 +197,7 @@ footer.page-footer {
 
 /* tweak the below to adjust linkscroll destinations */
 
-#about {
+#projects {
     margin-top:-4rem;
     padding-top:3.5rem;
     margin-bottom:0.5rem;
@@ -205,14 +208,9 @@ footer.page-footer {
     padding-top:3.5rem;
 }
 
-#work {
-    margin-top:-4rem;
-    padding-top:3.5rem;
-}
-
 #contact {
     margin-top:-4rem;
-    padding-top:2rem;
+    padding-top:3rem;
     margin-bottom:-1.5rem;
 }
 
