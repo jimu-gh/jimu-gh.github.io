@@ -171,10 +171,10 @@
     $('#topmsg').animateCss('rubberBand');
 
     //For figuring out scroll values (optional)
-    $(window).scroll(function(){
-    var winScroll = $(this).scrollTop();
-    console.log(winScroll);
-    });
+    // $(window).scroll(function(){
+    // var winScroll = $(this).scrollTop();
+    // console.log(winScroll);
+    // });
 
     // Hover UI
     $('#email').hover(function(){
