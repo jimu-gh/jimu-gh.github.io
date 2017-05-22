@@ -228,3 +228,8 @@ footer.page-footer {
 .tabs .indicator {
     background-color: black;
 }
+
+.nav-wrapper .brand-logo img {
+    height: 3rem;
+    margin-bottom:-1rem;
+}
