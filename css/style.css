@@ -111,7 +111,7 @@ p {
         margin:.5rem;
     }
     .strength {
-        padding:0rem;
+        padding:0.5rem;
         margin:0rem;
     }
     .tab a h5 {
@@ -125,7 +125,7 @@ p {
     }
     .skill {
         font-size:1.25rem;
-        margin-bottom:-0.25rem;
+        margin-bottom:-0.3rem;
     }
 }
 
@@ -197,12 +197,12 @@ footer.page-footer {
 #about {
     margin-top:-4rem;
     padding-top:3.5rem;
-    margin-bottom:-2rem;
+    margin-bottom:0.5rem;
 }
 
 #skills {
     margin-top:-8rem;
-    padding-top:3rem;
+    padding-top:3.5rem;
 }
 
 #work {
