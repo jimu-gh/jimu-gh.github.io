@@ -212,7 +212,7 @@
     function resetStrengthTexts(){
         $('#strengthdesc').animateCss('zoomOut');
         $('#strengthdesc').one(animationEnd, function(){
-            $('#strengthdesc').html('<br>')
+            $('#strengthdesc').text('(Click below)')
             $('#strengthdesc').animateCss('zoomIn');
         });
         $('#strengthtext').animateCss('fadeOut');
@@ -275,7 +275,7 @@
         }
     }, function(){
         if (wait2 == false) {
-            setTimeout(resetStrengthTexts,30000);
+            setTimeout(resetStrengthTexts,20000);
             wait2 = true;
         }
         $(this).removeClass();

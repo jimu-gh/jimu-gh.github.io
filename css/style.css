@@ -81,6 +81,9 @@ p {
     .projectname {
         font-size:2.25rem;
     }
+    .icon-block {
+        margin-bottom:-1.75rem;
+    }
 }
 
 @media only screen and (max-width : 992px) {
@@ -92,12 +95,11 @@ p {
         width:3.5rem;
         margin:1rem;
     }
-    .strength {
-        padding:0.5rem;
-        margin:0.5rem;
-    }
     .skill {
         margin-bottom:1.25rem;
+    }
+    .icon-block {
+        margin-bottom:-3.5rem;
     }
 }
 
@@ -109,10 +111,6 @@ p {
     .contacticon {
         width:3rem;
         margin:.5rem;
-    }
-    .strength {
-        padding:0.5rem;
-        margin:0rem;
     }
     .tab a h5 {
         font-size:1.25rem;
@@ -129,6 +127,9 @@ p {
     }
     #closingmsg {
         font-size:1.5rem;
+    }
+    .icon-block {
+        margin-bottom:-3.5rem;
     }
 }
 
