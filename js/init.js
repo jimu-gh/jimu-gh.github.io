@@ -135,7 +135,7 @@
         showCursor:false,
     });
     $("#submsg").typed({
-        strings: [":^500)","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist","Result-driven ENFJ Protagonist","Self-Proclaimed Music Otaku","Unabashed Laker Fan (The Warriors Are Pretty Awesome too)","Sous Chef For My Wife"],
+        strings: [":^500)","^4400Full Stack Web Developer<br>(RESTful Apps)","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist","Result-driven ENFJ Protagonist","Self-Proclaimed Music Otaku","Unabashed Laker Fan<br>(The Warriors Are Pretty Awesome too)","My Lovely Wife's Sous Chef","Pleased to meet you"],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
