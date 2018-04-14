@@ -126,7 +126,7 @@
 
     // Message programming
     $("#topmsg").typed({
-        strings: ["^250",haveANiceDayStr,"I am Jim Ho, ^1000000"],
+        strings: ["^250",haveANiceDayStr,"Hi I'm Jim Ho, ^1000000"],
         typeSpeed: 100,
         startDelay: 0,
         backSpeed: 33,
@@ -135,7 +135,7 @@
         showCursor:false,
     });
     $("#submsg").typed({
-        strings: [":^500)","^4400Full Stack Web Developer","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Python, Radiohead, And Sushi Lover","Trilingual Language Specialist","Result-driven ENFJ Protagonist","Self-Proclaimed Music Otaku","Unabashed Laker Fan<br>(The Warriors Are Pretty Awesome Too)","My Lovely Wife's Sous Chef","Amateur Hearthstone Player","Pleased To Meet You"],
+        strings: [":^500)","^4400Full Stack Web Developer","Data Enthusiast With Strong Focus On UI/UX","Service-oriented Entrepreneur","Forward-thinking Power Learner","Polyglot ENFJ Protagonist","Self-Proclaimed Music Otaku","Unabashed Laker Fan<br>(The Warriors Are Pretty Awesome Too)","My Lovely Wife's Sous Chef","Pleased To Meet You"],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
