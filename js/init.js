@@ -217,7 +217,7 @@
         });
         $('#strengthtext').animateCss('fadeOut');
         $('#strengthtext').one(animationEnd, function(){
-            $('#strengthtext').text('STRENGTHS');
+            $('#strengthtext').text('About Me');
             $('#strengthtext').animateCss('fadeIn');
         });
         wait2 = false;
@@ -280,7 +280,7 @@
         }
         $(this).removeClass();
         $(this).addClass('strength');
-        $(this).addClass('black-text');
+        $(this).addClass('white-text');
     });
 
     // Scrollfire customization

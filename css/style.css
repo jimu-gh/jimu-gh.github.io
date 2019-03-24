@@ -1,4 +1,8 @@
-nav ul a,
+body {
+  background-color:black;
+}
+
+  nav ul a,
 nav .brand-logo {
   color: white;
 }
@@ -76,13 +80,17 @@ p {
         margin:0.5rem;
     }
     .skill {
-        margin-bottom:1.25rem;
-    }
-    .projectname {
-        font-size:2.25rem;
+        font-size:1.5rem;
+        margin-bottom:1.5rem;
     }
     .icon-block {
         margin-bottom:-1.75rem;
+    }
+    .tabs .tab a {
+        font-size:1.25rem;
+    }
+    .flow-text {
+        font-size:1.25rem;
     }
 }
 
@@ -96,10 +104,17 @@ p {
         margin:1rem;
     }
     .skill {
-        margin-bottom:1.25rem;
+        font-size:1.4rem;
+        margin-bottom:0.1rem;
     }
     .icon-block {
         margin-bottom:-3.5rem;
+    }
+    .tabs .tab a {
+        font-size:0.75rem;
+    }
+    .flow-text {
+        font-size:1.25rem;
     }
 }
 
@@ -112,9 +127,6 @@ p {
         width:3rem;
         margin:.5rem;
     }
-    .tab a h5 {
-        font-size:1.25rem;
-    }
     .workdesc{
         font-size:1.25rem;
     }
@@ -122,8 +134,8 @@ p {
         font-size:1rem;
     }
     .skill {
-        font-size:1.25rem;
-        margin-bottom:-0.3rem;
+        font-size:1rem;
+        margin-bottom:-0.2rem;
     }
     #closingmsg {
         font-size:1.5rem;
@@ -137,7 +149,12 @@ p {
     .topicon{
         width: 2rem;
     }
-
+    .tabs .tab a {
+        font-size:1rem;
+    }
+    .flow-text {
+        font-size:1rem;
+    }
 }
 
 .icon-block {
@@ -232,7 +249,7 @@ footer.page-footer {
 }
 
 .tabs .indicator {
-    background-color: black;
+    background-color: white;
 }
 
 .nav-wrapper .brand-logo img {

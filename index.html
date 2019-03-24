@@ -11,16 +11,15 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/lightbox.css">
     </head>
     <body>
         <div class="navbar-fixed" id="navbar">
             <nav class="black" role="navigation">
                 <div class="nav-wrapper container">
-                    <a id="logo-container" href="#top" class="left jumper brand-logo white-text dropdown-button animated fadeInLeftBig" href="#!" data-activates="dropdown1">&nbsp;<img src="images/jim.jpg" class="circle"/>&nbsp;Jim Ho&nbsp;&nbsp;</a>
+                    <a id="logo-container" href="#top" class="left jumper brand-logo white-text dropdown-button" href="#!" data-activates="dropdown1">&nbsp;<img src="images/jim.jpg" class="circle"/>&nbsp;Jim Ho&nbsp;&nbsp;</a>
                     <ul id="dropdown1" class="dropdown-content">
                         <li><a class="jumper white-text" href="#projects">Projects</a></li>
-                        <li><a class="jumper white-text" href="#about">About Me</a></li>
+                        <li><a class="jumper white-text" href="#aboutme">About Me</a></li>
                         <li><a class="jumper white-text" href="#skills">Skills</a></li>
                         <li><a class="jumper white-text" href="#contact">Contact</a></li>
                     </ul>
@@ -56,8 +55,8 @@
             <div class="section no-pad-bot">
                 <div class="container">
                     <div class="row center">
-                        <h2 class="header center black-text" id="topmsg"></h2>
-                        <h3 class="header center black-text light" id="cursorobj"><span class="black-text" id="submsg"></span></h3>
+                        <h2 class="header center white-text" id="topmsg"></h2>
+                        <h3 class="header center white-text light" id="cursorobj"><span class="white-text" id="submsg"></span></h3>
                     </div>
                 </div>
             </div>
@@ -66,127 +65,117 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="section" id="projects">
-                <h3 class="header center black-text" id="worktitle">Projects</h3>
-                <div class="row">
-                    <ul id="tabs-swipe-demo" class="tabs">
-                        <li class="tab col s3"><a class="active blue-text text-darken-3" href="#swipe-project1"><h5 class="projectname">Kashi</h5></a></li>
-                        <li class="tab col s3"><a class="red-text text-darken-3" href="#swipe-project2"><h5 class="projectname">BentoMe</h5></a></li>
-                        <li class="tab col s3"><a class="green-text text-darken-3" href="#swipe-project3"><h5 class="projectname">VoterGab</h5></a></li>
-                        <li class="tab col s3"><a class="amber-text text-darken-3" href="#swipe-project4"><h5 class="projectname">PixelTune</h5></a></li>
+        <div class="section" id="projectsabout">
+            <div class="row">
+                <div class="header" id="projects"></div>
+                <div class="col m6 s12">
+                    <h4 class="header center white-text">Projects</h4>
+                    <ul id="tabs-swipe" class="tabs">
+                        <li class="tab col s3"><a class="active blue-text flow-text black" href="#swipe-project1">Kashi</a></li>
+                        <li class="tab col s3"><a class="red-text black" href="#swipe-project2">BentoMe</a></li>
+                        <li class="tab col s3"><a class="green-text black" href="#swipe-project3">VoterGab</a></li>
+                        <li class="tab col s3"><a class="amber-text black" href="#swipe-project4">PixelTune</a></li>
                     </ul>
                     <br />
                     <div id="swipe-project1" class="col s12">
-                        <h5 class="left-align flow-text">Kashi, a <a href="https://folivora.ai/" class="blue-text text-darken-2" target="_blank">BTT</a> <b>widget that displays the current song's lyrics in the Macbook Touch Bar</b>, is the result of otaku levels of audiophilicity and too much free time over the holidays. It gets the current song's artist/song data, intelligently queries and scrapes the <a href="https://docs.genius.com/" class="blue-text text-darken-2" target="_blank">Genius API</a>, and outputs the prettified result onto the Touch Bar.</h5>
-                        <h6 class="flow-text">&nbsp;• Displays current lyrics</h6>
-                        <h6 class="flow-text">&nbsp;• Compatible with Spotify and iTunes</h6>
-                        <h6 class="flow-text">&nbsp;• Made with ~100 lines of Python and Applescript</h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large blue darken-2" href="https://www.github.com/zer8ne/kashi" target="_blank">GitHub</a>
+                        <h6 class="left-align flow-text white-text">Kashi, a <a href="https://folivora.ai/" class="blue-text" target="_blank">BTT</a> <u>widget that displays the current song's lyrics in the Macbook Touch Bar</u>, is the result of otaku levels of audiophilicity and too much free time over a single holiday weekend. It gets the current song's artist/song data, intelligently queries and scrapes the <a href="https://docs.genius.com/" class="blue-text" target="_blank">Genius API</a>, and outputs the prettified result onto the Touch Bar.</h6>
+                        <p class="flow-text white-text">&nbsp;• Displays current lyrics</p>
+                        <p class="flow-text white-text">&nbsp;• Compatible with Spotify and iTunes</p>
+                        <p class="flow-text white-text">&nbsp;• ~100 lines of Python and Applescript</p>
+                        <p class="right-align">
+                            <a class="waves-effect waves-light btn blue darken-2" href="https://www.github.com/zer8ne/kashi" target="_blank">GitHub</a>
+                        </p>
                     </div>
                     <div id="swipe-project2" class="col s12">
-                        <h5 class="left-align flow-text">For this project, I led a local team in the development and launch of a fully online, self-sufficient <b>Japanese bento delivery service</b> as a <a href="https://www.djangoproject.com/" target="_blank" class="red-text text-darken-2"><u>Django</u></a> project on <a href="https://aws.amazon.com" target="_blank" class="red-text text-darken-2"><u>AWS</u></a>. I wanted to create a simple, yet powerful outlet for chefs to provide meals to wider markets, and with more flexibility. </h5>
-                        <h6 class="flow-text">&nbsp;• Featuring complete <a href="https://www.stripe.com" target="_blank" class="red-text text-darken-2"><u>Stripe</u></a> integration</h6>
-                        <h6 class="flow-text">&nbsp;• Daily menu (“du jour”) by trained native Japanese chef</h6>
-                        <h6 class="flow-text">&nbsp;• Beta tested in Burbank, California</h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large red darken-2" href="https://www.github.com/zer8ne/bentome" target="_blank">GitHub</a>
+                        <h6 class="left-align flow-text white-text">For this project, I led a local team in the development and launch of a fully online, self-sufficient <u>Japanese bento delivery service</u> as a <a href="https://www.djangoproject.com/" target="_blank" class="red-text"><u>Django</u></a> project on <a href="https://aws.amazon.com" target="_blank" class="red-text"><u>AWS</u></a>. I wanted to create a simple, yet powerful outlet for chefs to provide meals to wider markets, and with more flexibility. </h6>
+                        <p class="flow-text white-text">&nbsp;• Featuring complete <a href="https://www.stripe.com" target="_blank" class="red-text"><u>Stripe</u></a> integration</p>
+                        <p class="flow-text white-text">&nbsp;• Daily menu by native Japanese chef</p>
+                        <p class="flow-text white-text">&nbsp;• Beta tested in Burbank, California</p>
+                        <p class="right-align">
+                            <a class="waves-effect waves-light btn red darken-2" href="https://www.github.com/zer8ne/bentome" target="_blank">GitHub</a>
+                        </p>
                     </div>
                     <div id="swipe-project3" class="col s12">
-                        <h5 class="left-align flow-text">I worked jointly with CA Assembly District Delegates to create an <b>online voter community tool</b> in the <a href="http://mean.io" target="_blank" class="green-text text-darken-2"><u>MEAN</u></a> stack, using real live data from <a href="https://votesmart.org/share/api" target="_blank" class="green-text text-darken-2"><u>Vote Smart API</u></a>. After the presidential election of 2016, I felt the need to contribute toward voter information and organization.</h5>
-                        <h6 class="flow-text">&nbsp;• Personal live feed of current state ballot measures</h6>
-                        <h6 class="flow-text">&nbsp;• User Groups/Endorsements system with quorum feature</h6>
-                        <h6 class="flow-text">&nbsp;• Real-time <a href="https://socket.io/" target="_blank" class="green-text text-darken-2"><u>Socket.IO</u></a> chat (global and groups)</h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large green darken-2" href="https://github.com/noahneumark/voter_gab" target="_blank">GitHub</a>
-                        <a class="waves-effect waves-light btn-large green darken-2" href="http://votergab.jimho.us/" target="_blank">Site</a>
+                        <h6 class="left-align flow-text white-text">I worked jointly with CA Assembly District Delegates to create an <u>online voter community tool</u> in the <a href="http://mean.io" target="_blank" class="green-text"><u>MEAN</u></a> stack, using real live data from <a href="https://votesmart.org/share/api" target="_blank" class="green-text"><u>Vote Smart API</u></a>. After the presidential election of 2016, I felt the need to contribute toward voter information and organization.</h6>
+                        <p class="flow-text white-text">&nbsp;• Personal live feed of current state ballot measures</p>
+                        <p class="flow-text white-text">&nbsp;• Groups/Endorsements system with quorum feature</p>
+                        <p class="flow-text white-text">&nbsp;• Real-time <a href="https://socket.io/" target="_blank" class="green-text"><u>Socket.IO</u></a> chat (global and groups)</p>
+                        <p class="right-align">
+                            <a class="waves-effect waves-light btn green darken-2" href="https://github.com/noahneumark/voter_gab" target="_blank">GitHub</a>
+                            <a class="waves-effect waves-light btn green darken-2" href="http://votergab.jimho.us/" target="_blank">Site</a>
+                        </p>
                     </div>
                     <div id="swipe-project4" class="col s12">
-                        <h5 class="left-align flow-text">With PixelTune, I independently created an <b>iOS camera app</b> that suggests music recommendations based on image recognition from <a href="https://cloud.google.com/vision/" target="_blank" class="amber-text text-darken-2"><u>Google Cloud Vision</u></a>. I've always been fascinated with the synaesthetic aspect of how 1's and 0's can make us "feel".</h5>
-                        <h6 class="flow-text">&nbsp;• Support for emotion recognition: joy, sadness, sorrow, surprise</h6>
-                        <h6 class="flow-text">&nbsp;• <a href="https://github.com/spotify/ios-sdk" target="_blank" class="amber-text text-darken-2"><u>Spotify SDK</u></a> user authentication (Facebook support)</h6>
-                        <h6 class="flow-text">&nbsp;• In-app streaming using <a href="https://developer.spotify.com/web-api/" target="_blank" class="amber-text text-darken-2"><u>Spotify Web API</u></a></h6>
-                        <br />
-                        <a class="waves-effect waves-light btn-large amber darken-2" href="https://www.github.com/zer8ne/pixeltune" target="_blank">GitHub</a>
+                        <h6 class="left-align flow-text white-text">With PixelTune, I independently created an <u>iOS camera app</u> that suggests music recommendations based on image recognition from <a href="https://cloud.google.com/vision/" target="_blank" class="amber-text"><u>Google Cloud Vision</u></a>. I've always been fascinated with the synaesthetic aspect of how 1's and 0's can make us "feel".</h6>
+                        <p class="flow-text white-text">&nbsp;• Support for emotion recognition: joy, sadness, sorrow, surprise</p>
+                        <p class="flow-text white-text">&nbsp;• <a href="https://github.com/spotify/ios-sdk" target="_blank" class="amber-text"><u>Spotify SDK</u></a> user authentication (Facebook support)</p>
+                        <p class="flow-text white-text">&nbsp;• In-app streaming using <a href="https://developer.spotify.com/web-api/" target="_blank" class="amber-text"><u>Spotify Web API</u></a></p>
+                        <p class="right-align">
+                            <a class="waves-effect waves-light btn amber darken-2" href="https://www.github.com/zer8ne/pixeltune" target="_blank">GitHub</a>
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="section">
-                <h3 class="header" id="about">&nbsp;</h3>
-                <h3 class="header center black-text">About Me</h3>
-                <div class="row">
-                    <div class="col s4 m2">
+                <div class="col m6 s12">
+                    <h4 class="header center white-text" id="strengthtext">About Me</h4>
+                    <h5 class="header center white-text " id="strengthdesc">&nbsp;</h5>
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I learn quickly to fit any situation" id="Adaptability"><i class="material-icons">extension</i></h1>
+                            <h1 class="white-text strength" alt="I learn quickly to fit any situation" id="Adaptability"><i class="material-icons">extension</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="8 years of client service in Japan" id="Client Service"><i class="material-icons">star</i></h1>
+                            <h1 class="white-text strength" alt="8 years of client service in Japan" id="Client Service"><i class="material-icons">star</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Chinese and Japanese fluency" id="Communication"><i class="material-icons">translate</i></h1>
+                            <h1 class="white-text strength" alt="Chinese and Japanese fluency" id="Communication"><i class="material-icons">translate</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Realizing ideas with technology" id="Creativity"><i class="material-icons">wb_incandescent</i></h1>
+                            <h1 class="white-text strength" alt="Realizing ideas with technology" id="Creativity"><i class="material-icons">wb_incandescent</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Certified translator &amp; proofreader" id="Detail"><i class="material-icons">find_in_page</i></h1>
+                            <h1 class="white-text strength" alt="Certified translator &amp; proofreader" id="Detail"><i class="material-icons">find_in_page</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I make more happen, for less" id="Efficiency"><i class="material-icons">trending_up</i></h1>
+                            <h1 class="white-text strength" alt="I make more happen, for less" id="Efficiency"><i class="material-icons">trending_up</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I enjoy understanding people" id="Empathy"><i class="material-icons">favorite</i></h1>
+                            <h1 class="white-text strength" alt="I enjoy understanding people" id="Empathy"><i class="material-icons">favorite</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="If direction is necessary, I can lead" id="Leadership"><i class="material-icons">flag</i></h1>
+                            <h1 class="white-text strength" alt="If direction is necessary, I can lead" id="Leadership"><i class="material-icons">flag</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I love long algorithms on the beach" id="Logic"><i class="material-icons">casino</i></h1>
+                            <h1 class="white-text strength" alt="I love long algorithms on the beach" id="Logic"><i class="material-icons">casino</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="Natural ability to work with anyone" id="Teamwork"><i class="material-icons">people</i></h1>
+                            <h1 class="white-text strength" alt="Natural ability to work with anyone" id="Teamwork"><i class="material-icons">people</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="My eye stays on the big picture" id="Vision"><i class="material-icons">visibility</i></h1>
+                            <h1 class="white-text strength" alt="My eye stays on the big picture" id="Vision"><i class="material-icons">visibility</i></h1>
                         </div>
                     </div>
-
-                    <div class="col s4 m2">
+                    <div class="col s4 m4">
                         <div class="icon-block">
-                            <h1 class="black-text strength" alt="I strive 24/7 for client satisfaction" id="Work Ethic"><i class="material-icons">fitness_center</i></h1>
+                            <h1 class="white-text strength" alt="I strive 24/7 for client satisfaction" id="Work Ethic"><i class="material-icons">fitness_center</i></h1>
                         </div>
                     </div>
                 </div>
@@ -237,15 +226,13 @@
             <div class="parallax"><img src="images/bg2.jpg" alt="Unsplashed background img 2"></div>
         </div>
 
-
-        <footer class="page-footer light-blue lighten-5">
+        <footer class="page-footer blue-grey darken-3">
             <div class="container">
                 <div class="section" id="contact">
                     <div class="row">
-                        <!-- <a name="contact"></a> -->
                         <div class="col s12 center">
-                            <h3 class="header center">Contact</h3>
-                            <h5 class="light" id="closingmsg">Feel free to get in touch with me!</h5>
+                            <h3 class="header center white-text">Contact</h3>
+                            <h5 class="light white-text" id="closingmsg">Let's connect!</h5>
                             <div class="col s12 center">
                                 <a href="mailto:jimothy@gmail.com"><img class="contacticon hoverable" src="images/email.png" /></a>
                                 <a href="https://www.linkedin.com/in/hojim" target="_blank"><img class="contacticon hoverable" src="images/linkedin.png" /></a>
@@ -256,10 +243,10 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
+            <div class="footer-copyright black">
                 <div class="container">
-                    <h6 class="black-text right-align">Jim Ho © <span id="today"></span></h6>
-                    <h6 class="black-text right-align light">Made with <a href="http://materializecss.com/" target="_blank">Materialize</a>, and some tender loving care</h6>
+                    <h6 class="white-text right-align">Jim Ho © <span id="today"></span></h6>
+                    <h6 class="white-text right-align light">Made with <a href="http://materializecss.com/" target="_blank">Materialize</a>, and some tender loving care</h6>
                 </div>
             </div>
         </footer>
