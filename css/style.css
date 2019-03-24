@@ -76,15 +76,15 @@ p {
         top: 15%;
     }
     .strength {
-        padding:0.5rem;
-        margin:0.5rem;
+        padding:0.75rem;
+        margin:0rem;
     }
     .skill {
         font-size:1.5rem;
         margin-bottom:1.5rem;
     }
     .icon-block {
-        margin-bottom:-1.75rem;
+        margin-bottom:-2rem;
     }
     .tabs .tab a {
         font-size:1.25rem;
@@ -111,10 +111,10 @@ p {
         margin-bottom:-3.5rem;
     }
     .tabs .tab a {
-        font-size:0.75rem;
+        font-size:1rem;
     }
     .flow-text {
-        font-size:1.25rem;
+        font-size:1.2rem;
     }
 }
 
@@ -139,9 +139,6 @@ p {
     }
     #closingmsg {
         font-size:1.5rem;
-    }
-    .icon-block {
-        margin-bottom:-3.5rem;
     }
     .topbutton {
         margin-right:-0.9rem;

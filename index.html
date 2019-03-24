@@ -13,16 +13,19 @@
         <link rel="stylesheet" href="css/animate.css">
     </head>
     <body>
+
+        <!-- NAVBAR -->
+
         <div class="navbar-fixed" id="navbar">
             <nav class="black" role="navigation">
-                <div class="nav-wrapper container">
-                    <a id="logo-container" href="#top" class="left jumper brand-logo white-text dropdown-button" href="#!" data-activates="dropdown1">&nbsp;<img src="images/jim.jpg" class="circle"/>&nbsp;Jim Ho&nbsp;&nbsp;</a>
-                    <ul id="dropdown1" class="dropdown-content">
+                <div class="nav-wrapper">
+                    <a id="logo-container" href="#projects" class="left jumper brand-logo white-text dropdown-button" data-activates="dropdown1">&nbsp;<img src="images/me.jpg" class="circle"/>&nbsp;Jim Ho&nbsp;&nbsp;</a>
+                    <!-- <ul id="dropdown1" class="dropdown-content">
                         <li><a class="jumper white-text" href="#projects">Projects</a></li>
                         <li><a class="jumper white-text" href="#aboutme">About Me</a></li>
                         <li><a class="jumper white-text" href="#skills">Skills</a></li>
                         <li><a class="jumper white-text" href="#contact">Contact</a></li>
-                    </ul>
+                    </ul> -->
                     <!-- MAIN NAVBAR BUTTONS -->
                     <ul class="right">
                         <li><a href="mailto:jimothy@gmail.com" target="_blank" class="topbutton"><img src="images/icon_email.png" class="topicon" id="email"></a></li>
@@ -37,19 +40,20 @@
         <!-- SLIDE OUT MENU FOR MOBILE -->
 
         <div id="sidenav">
-            <ul id="slide-out" class="side-nav">
-                <li><div class="userView">
-                    <div class="background">
-                        <img src="images/ramen.jpg">
+            <ul id="slide-out" class="side-nav black">
+                <li>
+                    <div class="userView black">
+                        <img class="circle" src="images/me.jpg">
                     </div>
-                    <img class="circle" src="images/me.jpg">
-                </div></li>
-                <li><a href="mailto:jimothy@gmail.com"><h3>Email</h3></a></li>
-                <li><a href="https://www.linkedin.com/in/hojim" target="_blank"><h3>LinkedIn</h3></a></li>
-                <li><a href="https://www.github.com/zer8ne" target="_blank"><h3>GitHub</h3></a></li>
-                <li><a href="Jim_Ho_Resume.pdf"><h3>Resume</h3></a></li>
+                </li>
+                <li><a href="mailto:jimothy@gmail.com"><h3 class="white-text">Email</h3></a></li>
+                <li><a href="https://www.linkedin.com/in/hojim" target="_blank"><h3 class="white-text">LinkedIn</h3></a></li>
+                <li><a href="https://www.github.com/zer8ne" target="_blank"><h3 class="white-text">GitHub</h3></a></li>
+                <li><a href="Jim_Ho_Resume.pdf"><h3 class="white-text">Resume</h3></a></li>
             </ul>
         </div>
+
+        <!-- BACKGROUND CONTAINER -->
 
         <div class="parallax-container" id="top">
             <div class="section no-pad-bot">
@@ -65,20 +69,21 @@
             </div>
         </div>
 
-        <div class="section" id="projectsabout">
+        <!-- Projects/About -->
+
+        <div class="section" id="projects">
             <div class="row">
-                <div class="header" id="projects"></div>
+                <div class="header"></div>
                 <div class="col m6 s12">
                     <h4 class="header center white-text">Projects</h4>
                     <ul id="tabs-swipe" class="tabs">
                         <li class="tab col s3"><a class="active blue-text flow-text black" href="#swipe-project1">Kashi</a></li>
                         <li class="tab col s3"><a class="red-text black" href="#swipe-project2">BentoMe</a></li>
-                        <li class="tab col s3"><a class="green-text black" href="#swipe-project3">VoterGab</a></li>
-                        <li class="tab col s3"><a class="amber-text black" href="#swipe-project4">PixelTune</a></li>
+                        <li class="tab col s3"><a class="amber-text black" href="#swipe-project3">PixelTune</a></li>
+                        <li class="tab col s3"><a class="green-text black" href="#swipe-project4">VoterGab</a></li>
                     </ul>
-                    <br />
                     <div id="swipe-project1" class="col s12">
-                        <h6 class="left-align flow-text white-text">Kashi, a <a href="https://folivora.ai/" class="blue-text" target="_blank">BTT</a> <u>widget that displays the current song's lyrics in the Macbook Touch Bar</u>, is the result of otaku levels of audiophilicity and too much free time over a single holiday weekend. It gets the current song's artist/song data, intelligently queries and scrapes the <a href="https://docs.genius.com/" class="blue-text" target="_blank">Genius API</a>, and outputs the prettified result onto the Touch Bar.</h6>
+                        <h6 class="left-align flow-text white-text">Kashi, a <a href="https://folivora.ai/" class="blue-text" target="_blank">BTT</a> <u>widget that displays the current song's lyrics in the Macbook Touch Bar</u>, is the result of otaku levels of audiophilicity and too much free time over a single holiday weekend. It gets the current song's data, intelligently queries and scrapes the <a href="https://docs.genius.com/" class="blue-text" target="_blank">Genius API</a>, and outputs the prettified result onto the Touch Bar.</h6>
                         <p class="flow-text white-text">&nbsp;• Displays current lyrics</p>
                         <p class="flow-text white-text">&nbsp;• Compatible with Spotify and iTunes</p>
                         <p class="flow-text white-text">&nbsp;• ~100 lines of Python and Applescript</p>
@@ -96,6 +101,15 @@
                         </p>
                     </div>
                     <div id="swipe-project3" class="col s12">
+                        <h6 class="left-align flow-text white-text">With PixelTune, I independently created an <u>iOS camera app</u> that suggests music recommendations based on image recognition from <a href="https://cloud.google.com/vision/" target="_blank" class="amber-text"><u>Google Cloud Vision</u></a>. I've always been fascinated with the synaesthetic aspect of how 1's and 0's can make us "feel".</h6>
+                        <p class="flow-text white-text">&nbsp;• Support for emotion recognition: joy, sadness, sorrow, surprise</p>
+                        <p class="flow-text white-text">&nbsp;• <a href="https://github.com/spotify/ios-sdk" target="_blank" class="amber-text"><u>Spotify SDK</u></a> user authentication (Facebook support)</p>
+                        <p class="flow-text white-text">&nbsp;• In-app streaming using <a href="https://developer.spotify.com/web-api/" target="_blank" class="amber-text"><u>Spotify Web API</u></a></p>
+                        <p class="right-align">
+                            <a class="waves-effect waves-light btn amber darken-2" href="https://www.github.com/zer8ne/pixeltune" target="_blank">GitHub</a>
+                        </p>
+                    </div>
+                    <div id="swipe-project4" class="col s12">
                         <h6 class="left-align flow-text white-text">I worked jointly with CA Assembly District Delegates to create an <u>online voter community tool</u> in the <a href="http://mean.io" target="_blank" class="green-text"><u>MEAN</u></a> stack, using real live data from <a href="https://votesmart.org/share/api" target="_blank" class="green-text"><u>Vote Smart API</u></a>. After the presidential election of 2016, I felt the need to contribute toward voter information and organization.</h6>
                         <p class="flow-text white-text">&nbsp;• Personal live feed of current state ballot measures</p>
                         <p class="flow-text white-text">&nbsp;• Groups/Endorsements system with quorum feature</p>
@@ -105,19 +119,10 @@
                             <a class="waves-effect waves-light btn green darken-2" href="http://votergab.jimho.us/" target="_blank">Site</a>
                         </p>
                     </div>
-                    <div id="swipe-project4" class="col s12">
-                        <h6 class="left-align flow-text white-text">With PixelTune, I independently created an <u>iOS camera app</u> that suggests music recommendations based on image recognition from <a href="https://cloud.google.com/vision/" target="_blank" class="amber-text"><u>Google Cloud Vision</u></a>. I've always been fascinated with the synaesthetic aspect of how 1's and 0's can make us "feel".</h6>
-                        <p class="flow-text white-text">&nbsp;• Support for emotion recognition: joy, sadness, sorrow, surprise</p>
-                        <p class="flow-text white-text">&nbsp;• <a href="https://github.com/spotify/ios-sdk" target="_blank" class="amber-text"><u>Spotify SDK</u></a> user authentication (Facebook support)</p>
-                        <p class="flow-text white-text">&nbsp;• In-app streaming using <a href="https://developer.spotify.com/web-api/" target="_blank" class="amber-text"><u>Spotify Web API</u></a></p>
-                        <p class="right-align">
-                            <a class="waves-effect waves-light btn amber darken-2" href="https://www.github.com/zer8ne/pixeltune" target="_blank">GitHub</a>
-                        </p>
-                    </div>
                 </div>
                 <div class="col m6 s12">
                     <h4 class="header center white-text" id="strengthtext">About Me</h4>
-                    <h5 class="header center white-text " id="strengthdesc">&nbsp;</h5>
+                    <h6 class="header center white-text " id="strengthdesc">&nbsp;</h6>
                     <div class="col s4 m4">
                         <div class="icon-block">
                             <h1 class="white-text strength" alt="I learn quickly to fit any situation" id="Adaptability"><i class="material-icons">extension</i></h1>
@@ -182,11 +187,10 @@
             </div>
         </div>
 
-        <div class="parallax-container valign-wrapper">
+        <div class="parallax-container">
             <div class="section no-pad-bot" id="skills">
                 <div class="container">
                     <div class="row center">
-                        <!-- <a name="skills"></a> -->
                         <h3 class="header center white-text" id='skillstitle'>Skills</h3>
                         <div class="col s12 m12 skilllist">
                             <div class="col m4 s6 white-text">
@@ -256,6 +260,5 @@
         <script src="js/materialize.js"></script>
         <script src="js/typed.js" type="text/javascript"></script>
         <script src="js/init.js"></script>
-        <script src="js/lightbox.js"></script>
     </body>
 </html>

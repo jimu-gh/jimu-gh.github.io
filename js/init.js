@@ -126,7 +126,7 @@
 
     // Message programming
     $("#topmsg").typed({
-        strings: ["^250",haveANiceDayStr,"Hi I'm Jim Ho, ^1000000"],
+        strings: ["^250",haveANiceDayStr,"Hi I'm Jim, ^1000000"],
         typeSpeed: 100,
         startDelay: 0,
         backSpeed: 33,
@@ -212,7 +212,7 @@
     function resetStrengthTexts(){
         $('#strengthdesc').animateCss('zoomOut');
         $('#strengthdesc').one(animationEnd, function(){
-            $('#strengthdesc').text('(Click below)')
+            $('#strengthdesc').text('')
             $('#strengthdesc').animateCss('zoomIn');
         });
         $('#strengthtext').animateCss('fadeOut');
