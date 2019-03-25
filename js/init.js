@@ -202,32 +202,14 @@
         $('#instagram').attr('src','images/icon_instagram.png');
     });
 
-    // About animations
-    var wait1 = false;
-    var wait2 = false;
     var currentStrength = "";
     var nextStrength = "";
-
-    function resetStrengthTexts(){
-        $('#strengthdesc').animateCss('zoomOut');
-        $('#strengthdesc').one(animationEnd, function(){
-            $('#strengthdesc').text('')
-            $('#strengthdesc').animateCss('zoomIn');
-        });
-        $('#strengthtext').animateCss('fadeOut');
-        $('#strengthtext').one(animationEnd, function(){
-            $('#strengthtext').text('About Me');
-            $('#strengthtext').animateCss('fadeIn');
-        });
-        wait2 = false;
-        wait1 = false;
-    }
 
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
     var animationDict = {
-        'Adaptability':["deep-orange-text","swing"],
         'Client Service':["blue-text","tada"],
+        'Adaptability':["deep-orange-text","swing"],
         'Communication':["cyan-text","rubberBand"],
         'Creativity':["amber-text","flash"],
         'Detail':["teal-text","shake"],
@@ -241,67 +223,31 @@
     };
 
     $('.strength').hover(function(){
-        $('.strength').addClass('white-text');
         nextStrength = $(this).attr('id');
         if (currentStrength != nextStrength){
-            $('#strengthtext').animateCss('fadeOut');
-            $('#strengthdesc').animateCss('zoomOut');
+            $('.strength').addClass('white-text');
             var iconColor = animationDict[nextStrength][0];
             var iconAnimation = animationDict[nextStrength][1];
             var nextDesc = $(this).attr('alt');
             $(this).removeClass();
             $(this).addClass('strength');
             $(this).addClass(iconColor);
+            // ICON ANIMATION
             $(this).animateCss(iconAnimation);
-                $('#strengthtext').animateCss('fadeOut');
-                $('#strengthtext').one(animationEnd, function(){
-                    $('#strengthtext').text(nextStrength);
-                    $('#strengthtext').animateCss('fadeIn');
-                });
-                $('#strengthdesc').animateCss('zoomOut');
-                $('#strengthdesc').one(animationEnd, function(){
-                    $('#strengthdesc').text(nextStrength);
-                    $('#strengthdesc').text(nextDesc);
-                    $('#strengthdesc').animateCss('zoomIn');
-                });
+            // STRENGTH AND STRENGTH DESCRIPTION ANIMATION
+            $('#strengthtext').animateCss('fadeOut');
+            $('#strengthtext').one(animationEnd, function(){
+                $('#strengthtext').text(nextStrength);
+                $('#strengthtext').animateCss('fadeIn');
+            });
+            $('#strengthdesc').animateCss('zoomOut');
+            $('#strengthdesc').one(animationEnd, function(){
+                $('#strengthdesc').text(nextStrength);
+                $('#strengthdesc').text(nextDesc);
+                $('#strengthdesc').animateCss('zoomIn');
+            });
         }
-        // var nextDesc = $(this).attr('alt');
-
-        // $(this).removeClass();
-        // $(this).addClass('strength');
-        // $(this).addClass(textColor);
-
-        // if (wait1 == false || currentStrength != nextStrength) {
-        //     wait1 = true;
-        //     currentStrength = nextStrength;
-        //
-        //     iconAnimation = animationDict[nextStrength][1];
-        //
-        //     // ICON ANIMATION
-        //     $(this).animateCss(iconAnimation);
-        //
-        //     // STRENGTH AND STRENGTH DESCRIPTION ANIMATION
-        //     $('#strengthtext').animateCss('fadeOut');
-        //     $('#strengthtext').one(animationEnd, function(){
-        //         $('#strengthtext').text(nextStrength);
-        //         $('#strengthtext').animateCss('fadeIn');
-        //     });
-        //
-        //     $('#strengthdesc').animateCss('zoomOut');
-        //     $('#strengthdesc').one(animationEnd, function(){
-        //         $('#strengthdesc').text(nextStrength);
-        //         $('#strengthdesc').text(nextDesc);
-        //         $('#strengthdesc').animateCss('zoomIn');
-        //     });
-        // }
     }, function(){
-        // if (wait2 == false) {
-        //     setTimeout(resetStrengthTexts,20000);
-        //     wait2 = true;
-        // }
-        // $(this).removeClass();
-        // $(this).addClass('strength');
-        // $(this).addClass('white-text');
     });
 
     // Scrollfire customization
