@@ -1,6 +1,5 @@
 (function($){
   $(function(){
-
     // Set Navbar according to device
 
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
@@ -45,12 +44,6 @@
         $('#bg1').attr("src", imgString);
     }
     setCurrentBackground();
-
-    // Initialize collapse button, parallax, and carousel
-    $(".button-collapse").sideNav();
-    $('.parallax').parallax();
-    // $('.carousel').carousel({fullWidth: true, indicators: true});
-    $('ul.tabs').tabs();
 
     // Custom greeting based on time
     var haveANiceDayStr = ""
@@ -250,6 +243,12 @@
     }, function(){
     });
 
+    $('#modal1-close-button').click(function(){
+        $('video').each(function(){
+            this.pause()
+        });
+    });
+
     // Scrollfire customization
     var options = [
         {selector: '#skills1', offset: 200, callback: function(el) {
@@ -260,6 +259,14 @@
         }}
     ];
     Materialize.scrollFire(options);
+
+    // Initialize collapse button, parallax, and carousel
+    $(".button-collapse").sideNav();
+    $('.parallax').parallax();
+    $('ul.tabs').tabs();
+    $('.modal').modal();
+    $('.slider').slider();
+    $('.materialboxed').materialbox();
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

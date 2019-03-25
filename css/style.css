@@ -262,3 +262,7 @@ footer.page-footer {
     height: 3rem;
     margin-bottom:-1rem;
 }
+
+.bento {
+    object-fit: contain;
+}
