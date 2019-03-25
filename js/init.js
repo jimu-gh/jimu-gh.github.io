@@ -243,7 +243,13 @@
     }, function(){
     });
 
-    $('#modal1-close-button').click(function(){
+    $('#modal1-open').click(function(){
+        $('video').each(function(){
+            this.play()
+        });
+    });
+
+    $('#modal1-close').click(function(){
         $('video').each(function(){
             this.pause()
         });
