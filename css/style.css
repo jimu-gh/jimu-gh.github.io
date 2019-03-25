@@ -150,7 +150,8 @@ p {
         margin-right:-0.9rem;
     }
     .topicon{
-        width: 2rem;
+        width:2rem;
+        margin-right:0.25rem;
     }
     .tabs .tab a {
         font-size:1rem;
