@@ -255,6 +255,10 @@
         });
     });
 
+    $('#modal1').modal1({
+
+    });
+
     // Scrollfire customization
     var options = [
         {selector: '#skills1', offset: 200, callback: function(el) {
