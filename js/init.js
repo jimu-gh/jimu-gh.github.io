@@ -243,22 +243,6 @@
     }, function(){
     });
 
-    $('#modal1-open').click(function(){
-        $('video').each(function(){
-            this.play()
-        });
-    });
-
-    $('#modal1-close').click(function(){
-        $('video').each(function(){
-            this.pause()
-        });
-    });
-
-    $('#modal1').modal1({
-
-    });
-
     // Scrollfire customization
     var options = [
         {selector: '#skills1', offset: 200, callback: function(el) {
