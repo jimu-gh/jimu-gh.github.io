@@ -259,7 +259,7 @@
     $('.parallax').parallax();
     $('ul.tabs').tabs();
     $('.modal').modal();
-    $('.slider').slider();
+    $('.slider').slider({height:800});
     $('.materialboxed').materialbox();
 
   }); // end of document ready
