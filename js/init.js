@@ -128,7 +128,7 @@
         showCursor:false,
     });
     $("#submsg").typed({
-        strings: [":^500)","^4400Full Stack Web Developer","Service-oriented Engineer","Human & Computer Language Polyglot","Kaizen Practitioner","Life-long Laker Fan","My Wife's Sous Chef","Pleased To Meet You"],
+        strings: [":^500)","^4400Full Stack Web Developer","Service-oriented Engineer","Human / Computer Language Polyglot","Kaizen Practitioner","Life-long Laker Fan","My Wife's Sous Chef","Pleased To Meet You"],
         typeSpeed: 33,
         startDelay: 3000,
         backSpeed: 0,
